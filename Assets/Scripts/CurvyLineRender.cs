@@ -1,3 +1,5 @@
+using Unity.Mathematics;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -27,6 +29,7 @@ public class CurvyLineRender : MonoBehaviour
         for(int i=0; i<controlKnots.Length; i++)
         {
             spline.Add(controlKnots[i]);
+            spline.SetTangentMode(i, TangentMode.AutoSmooth);
         }
         spline.Closed = false;
     }
@@ -36,6 +39,7 @@ public class CurvyLineRender : MonoBehaviour
         controlKnots[0].Position = upperLeg.position;
         controlKnots[1].Position = ankle.position;
         controlKnots[2].Position = foot.position;
+
         for(int i=0; i<controlKnots.Length; i++)
         {
             spline.SetKnot(i, controlKnots[i]);
