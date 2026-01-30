@@ -766,6 +766,7 @@ GameObject:
   - component: {fileID: 7481898857017389477}
   - component: {fileID: 6808818247340104952}
   - component: {fileID: 6499775727317704859}
+  - component: {fileID: 9063553059836011789}
   m_Layer: 0
   m_Name: hero
   m_TagString: Untagged
@@ -835,9 +836,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FaceControl
   cursorTrans: {fileID: 0}
   faceTrans: {fileID: 856449621048659663}
-  rotateRange: 15
-  followFactor: 0.1
+  followFactor: 0.12
   followLerp: 5
+  rotateFade: 3
+  rotateRange: 15
+--- !u!114 &9063553059836011789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092801537362987464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d615d428301fd5d4492433032db6aab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BodyControl
+  faceTrans: {fileID: 0}
+  bodyTrans: {fileID: 0}
 --- !u!1 &4110676623588141201
 GameObject:
   m_ObjectHideFlags: 0
