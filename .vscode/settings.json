@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "GlobalGameJame2026.slnx"
+    "dotnet.defaultSolution": "GlobalGameJame2026.sln"
 }
