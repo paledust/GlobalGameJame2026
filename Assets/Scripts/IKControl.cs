@@ -50,9 +50,9 @@ public class IKControl:MonoBehaviour
             jointAngle_b = 180f - angle_b;
         }
 
-        Vector3 euler_a = joint_A.transform.localEulerAngles;
+        Vector3 euler_a = joint_A.transform.eulerAngles;
         euler_a.z = jointAngle_a;
-        joint_A.transform.localEulerAngles = euler_a;
+        joint_A.transform.eulerAngles = euler_a;
 
         Vector3 euler_b = joint_B.transform.localEulerAngles;
         euler_b.z = jointAngle_b;
