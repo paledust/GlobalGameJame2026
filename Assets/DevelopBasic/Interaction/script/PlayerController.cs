@@ -79,7 +79,6 @@ public class PlayerController : MonoBehaviour
             m_hoveringInteractable.OnExitHover();
             m_hoveringInteractable = null;
         }
-        if(!m_holdingInteractable) PlayerManager.Instance.UpdateCursorState(CURSOR_STATE.DEFAULT);
     }
     void ClearHoldingInteractable(){
         if(m_holdingInteractable != null){
@@ -87,7 +86,6 @@ public class PlayerController : MonoBehaviour
             m_holdingInteractable = null;
             holding.OnRelease(this);
         }
-        if(!m_hoveringInteractable) PlayerManager.Instance.UpdateCursorState(CURSOR_STATE.DEFAULT);
         else PlayerManager.Instance.UpdateCursorState(CURSOR_STATE.HOVER);
     }
     void InteractWithClickable(){
@@ -106,7 +104,6 @@ public class PlayerController : MonoBehaviour
     }
     public void HoldInteractable(Interactable interactable){
         m_holdingInteractable = interactable;
-        PlayerManager.Instance.UpdateCursorState(CURSOR_STATE.Click);
     }
     public void ReleaseCurrentHolding()=>ClearHoldingInteractable();
     public void CheckControllable(){
@@ -132,6 +129,8 @@ public class PlayerController : MonoBehaviour
         PointerScrPos = _scrPos;
     }
     void OnFire(InputAction.CallbackContext context){
+        EventHandler.Call_OnCloseEye();
+        PlayerManager.Instance.UpdateCursorState(CURSOR_STATE.Click);
         if(m_holdingInteractable != null) return;
         if(m_hoveringInteractable == null) return;
         InteractWithClickable();
@@ -139,6 +138,7 @@ public class PlayerController : MonoBehaviour
     void OnFireCancel(InputAction.CallbackContext context)
     {
         ClearHoldingInteractable();
+        PlayerManager.Instance.UpdateCursorState(CURSOR_STATE.DEFAULT);
     }
 #endregion
 }

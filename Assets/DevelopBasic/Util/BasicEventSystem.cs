@@ -14,6 +14,11 @@ public static class EventHandler
     public static void Call_OnBeginSave()=>E_OnBeginSave?.Invoke();
     public static event Action E_OnCompleteSave;
     public static void Call_OnCompleteSave()=>E_OnCompleteSave?.Invoke();
+    
+    #region Interaction Event
+    public static event Action E_OnCloseEye;
+    public static void Call_OnCloseEye()=>E_OnCloseEye?.Invoke();
+    #endregion
 }
 
 //A More Strict Event System

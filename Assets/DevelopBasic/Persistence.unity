@@ -166,6 +166,8 @@ MonoBehaviour:
   customCursor: {fileID: 1449595657}
   imgCursor: {fileID: 541079517}
   imgClosed: {fileID: 1241705527}
+  objPuiple: {fileID: 475841992}
+  currentCursorState: 0
 --- !u!1 &400117799
 GameObject:
   m_ObjectHideFlags: 0

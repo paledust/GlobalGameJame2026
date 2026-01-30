@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class EyeControl : MonoBehaviour
 {
-    [SerializeField] private float followRadius = 0.2f;
     [SerializeField] private Transform targetTrans;
     [SerializeField] private Eye[] eyes;
 

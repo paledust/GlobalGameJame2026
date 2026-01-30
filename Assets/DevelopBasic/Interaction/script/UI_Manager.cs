@@ -11,8 +11,9 @@ public class UI_Manager : Singleton<UI_Manager>
 [Header("Cursor Sprite")]
     [SerializeField] private Image imgCursor;
     [SerializeField] private Image imgClosed;
+    [SerializeField] private GameObject objPuiple;
 
-    private CURSOR_STATE currentCursorState = CURSOR_STATE.DEFAULT;
+    [SerializeField, ShowOnly] private CURSOR_STATE currentCursorState = CURSOR_STATE.DEFAULT;
     private CoroutineExcuter cursorChanger;
 
     protected override void Awake()
@@ -35,50 +36,53 @@ public class UI_Manager : Singleton<UI_Manager>
             case CURSOR_STATE.DEFAULT:
                 switch(newState){
                     case CURSOR_STATE.HOVER:
-                        cursorChanger.Excute(coroutineChangeCursor(0.8f, 1.2f, 0.2f));
+                        SwapEye(false);
+                        cursorChanger.Excute(coroutineChangeCursor(1f, 1.2f, 0.2f));
                         break;
                     case CURSOR_STATE.Click:
                         SwapEye(true);
-                        cursorChanger.Excute(coroutineChangeCursor(0.2f, 1f, 0.2f));
+                        cursorChanger.Excute(coroutineChangeCursor(1f, .8f, 0.2f));
                         break;
                 }
                 break;
             case CURSOR_STATE.HOVER:
                 switch(newState){
                     case CURSOR_STATE.DEFAULT:
-                        cursorChanger.Excute(coroutineChangeCursor(0.5f, 1f, 0.2f));
+                        SwapEye(false);
+                        cursorChanger.Excute(coroutineChangeCursor(1f, 1f, 0.2f));
                         break;
                     case CURSOR_STATE.Click:
                         SwapEye(true);
-                        cursorChanger.Excute(coroutineChangeCursor(0.2f, 1f, 0.2f));
+                        cursorChanger.Excute(coroutineChangeCursor(1f, .8f, 0.2f));
                         break;
                 }
                 break;
             case CURSOR_STATE.Click:
+                SwapEye(false);
                 switch(newState){
                     case CURSOR_STATE.DEFAULT:
-                        SwapEye(false);
-                        cursorChanger.Excute(coroutineChangeCursor(0.5f, 1f, 0.2f));
+                        cursorChanger.Excute(coroutineChangeCursor(1f, .8f, 0.2f));
                         break;
                     case CURSOR_STATE.HOVER:
-                        SwapEye(false);
-                        cursorChanger.Excute(coroutineChangeCursor(0.8f, 1.2f, 0.2f));
+                        cursorChanger.Excute(coroutineChangeCursor(1f, 1.2f, 0.2f));
                         break;
                 }
                 break;
         }
+        currentCursorState = newState;
     }
     void SwapEye(bool isClosed)
     {
         imgCursor.enabled = !isClosed;
         imgClosed.enabled = isClosed;
+        objPuiple.SetActive(!isClosed);
     }
     IEnumerator coroutineChangeCursor(float alpha, float size, float duration){
         float initSize = customCursor.transform.localScale.x;
         float initAlpha = customCursor.alpha;
         yield return new WaitForLoop(duration, (t)=>{
             customCursor.alpha = Mathf.Lerp(initAlpha, alpha, EasingFunc.Easing.SmoothInOut(t));
-            customCursor.transform.localScale = Vector3.one * Mathf.Lerp(initSize, size, EasingFunc.Easing.SmoothInOut(t));
+            customCursor.transform.localScale = Vector3.one * Mathf.Lerp(initSize, size, EasingFunc.Easing.BackEaseOut(t));
         });
     }
 }
