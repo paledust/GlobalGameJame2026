@@ -3,13 +3,14 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum CURSOR_STATE{DEFAULT, HOVER, DRAG}
+public enum CURSOR_STATE{DEFAULT, HOVER, Click}
 public class UI_Manager : Singleton<UI_Manager>
 {
 [Header("Custom Cursor")]
     [SerializeField] private CanvasGroup customCursor;
 [Header("Cursor Sprite")]
     [SerializeField] private Image imgCursor;
+    [SerializeField] private Image imgClosed;
 
     private CURSOR_STATE currentCursorState = CURSOR_STATE.DEFAULT;
     private CoroutineExcuter cursorChanger;
@@ -17,7 +18,6 @@ public class UI_Manager : Singleton<UI_Manager>
     protected override void Awake()
     {
         base.Awake();
-        imgCursor.color = Color.white;
         cursorChanger = new CoroutineExcuter(this);
         Cursor.visible = false;
         UpdateCursorState(currentCursorState);
@@ -25,11 +25,6 @@ public class UI_Manager : Singleton<UI_Manager>
     void OnApplicationFocus(bool hasFocus)
     {
         Cursor.visible = false;
-    }
-    public void ChangeCursorColor(bool isWhite)
-    {
-        imgCursor.DOKill();
-        imgCursor.DOColor(isWhite? Color.white : Color.black, 0.2f);
     }
     public void UpdateCursorPos(Vector2 scrPos)
     {
@@ -42,8 +37,9 @@ public class UI_Manager : Singleton<UI_Manager>
                     case CURSOR_STATE.HOVER:
                         cursorChanger.Excute(coroutineChangeCursor(0.8f, 1.2f, 0.2f));
                         break;
-                    case CURSOR_STATE.DRAG:
-                        cursorChanger.Excute(coroutineChangeCursor(0.2f, 0f, 0.2f));
+                    case CURSOR_STATE.Click:
+                        SwapEye(true);
+                        cursorChanger.Excute(coroutineChangeCursor(0.2f, 1f, 0.2f));
                         break;
                 }
                 break;
@@ -52,22 +48,30 @@ public class UI_Manager : Singleton<UI_Manager>
                     case CURSOR_STATE.DEFAULT:
                         cursorChanger.Excute(coroutineChangeCursor(0.5f, 1f, 0.2f));
                         break;
-                    case CURSOR_STATE.DRAG:
-                        cursorChanger.Excute(coroutineChangeCursor(0.2f, 0f, 0.2f));
+                    case CURSOR_STATE.Click:
+                        SwapEye(true);
+                        cursorChanger.Excute(coroutineChangeCursor(0.2f, 1f, 0.2f));
                         break;
                 }
                 break;
-            case CURSOR_STATE.DRAG:
+            case CURSOR_STATE.Click:
                 switch(newState){
                     case CURSOR_STATE.DEFAULT:
+                        SwapEye(false);
                         cursorChanger.Excute(coroutineChangeCursor(0.5f, 1f, 0.2f));
                         break;
                     case CURSOR_STATE.HOVER:
+                        SwapEye(false);
                         cursorChanger.Excute(coroutineChangeCursor(0.8f, 1.2f, 0.2f));
                         break;
                 }
                 break;
         }
+    }
+    void SwapEye(bool isClosed)
+    {
+        imgCursor.enabled = !isClosed;
+        imgClosed.enabled = isClosed;
     }
     IEnumerator coroutineChangeCursor(float alpha, float size, float duration){
         float initSize = customCursor.transform.localScale.x;

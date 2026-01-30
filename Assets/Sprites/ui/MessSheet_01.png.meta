@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 59676adeb5d0ef64cac36658584dfebd
+guid: 68173c54d06befc419b53d315ae91774
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2506288694448442260
-    second: Cursor_DropShadow_0
+      213: -4534881500124076749
+    second: MessSheet_01_0
+  - first:
+      213: 1630439219482377201
+    second: MessSheet_01_1
+  - first:
+      213: -6862918805445867617
+    second: MessSheet_01_2
+  - first:
+      213: 75964198464438882
+    second: MessSheet_01_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +135,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cursor_DropShadow_0
+      name: MessSheet_01_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 6
-        width: 244
-        height: 244
+        x: 0
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c64b2d616bfd73dd0800000000000000
-      internalID: -2506288694448442260
+      spriteID: 3352d9e6d4dd011c0800000000000000
+      internalID: -4534881500124076749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MessSheet_01_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fbbc19e4db70a610800000000000000
+      internalID: 1630439219482377201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MessSheet_01_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f970d0f25b302c0a0800000000000000
+      internalID: -6862918805445867617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MessSheet_01_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 262ce193901ed0100800000000000000
+      internalID: 75964198464438882
       vertices: []
       indices: 
       edges: []
@@ -151,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: aa39bf8eec28111498ac72d9db1c96d7
     internalID: 0
     vertices: []
     indices: 
@@ -159,9 +234,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Cursor_DropShadow_0: -2506288694448442260
+      MessSheet_01_0: -4534881500124076749
+      MessSheet_01_1: 1630439219482377201
+      MessSheet_01_2: -6862918805445867617
+      MessSheet_01_3: 75964198464438882
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
