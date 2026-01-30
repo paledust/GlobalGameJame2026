@@ -765,6 +765,7 @@ GameObject:
   - component: {fileID: 2154108298900518774}
   - component: {fileID: 7481898857017389477}
   - component: {fileID: 6808818247340104952}
+  - component: {fileID: 6499775727317704859}
   m_Layer: 0
   m_Name: hero
   m_TagString: Untagged
@@ -815,7 +816,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EyeControl
   followRadius: 0.2
   targetTrans: {fileID: 0}
-  eyes: []
+  eyes:
+  - {fileID: 2882202534721410081}
+  - {fileID: 4000395132896853534}
+  - {fileID: 5865694239052895105}
+  - {fileID: 5722323508169215130}
+--- !u!114 &6499775727317704859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092801537362987464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7dcee8fe7de2e41b97596a24ac692a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FaceControl
+  cursorTrans: {fileID: 0}
+  faceTrans: {fileID: 856449621048659663}
+  rotateRange: 15
+  followFactor: 0.1
+  followLerp: 5
 --- !u!1 &4110676623588141201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,6 +1418,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3efe6b7a432bc14489ca696458f08eb, type: 3}
+--- !u!114 &5865694239052895105 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6506625859749726967, guid: c3efe6b7a432bc14489ca696458f08eb, type: 3}
+  m_PrefabInstance: {fileID: 804750615724775798}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437d6663605a6444bbde8d228e048c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Eye
 --- !u!4 &8016920519669241878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7235840767940460896, guid: c3efe6b7a432bc14489ca696458f08eb, type: 3}
@@ -1458,6 +1491,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3efe6b7a432bc14489ca696458f08eb, type: 3}
+--- !u!114 &5722323508169215130 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6506625859749726967, guid: c3efe6b7a432bc14489ca696458f08eb, type: 3}
+  m_PrefabInstance: {fileID: 1523882809617008237}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437d6663605a6444bbde8d228e048c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Eye
 --- !u!4 &8164803473501210381 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7235840767940460896, guid: c3efe6b7a432bc14489ca696458f08eb, type: 3}
@@ -1525,6 +1569,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7235840767940460896, guid: c3efe6b7a432bc14489ca696458f08eb, type: 3}
   m_PrefabInstance: {fileID: 7910695424124810473}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4000395132896853534 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6506625859749726967, guid: c3efe6b7a432bc14489ca696458f08eb, type: 3}
+  m_PrefabInstance: {fileID: 7910695424124810473}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437d6663605a6444bbde8d228e048c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Eye
 --- !u!1001 &9057739757270605526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1587,3 +1642,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7235840767940460896, guid: c3efe6b7a432bc14489ca696458f08eb, type: 3}
   m_PrefabInstance: {fileID: 9057739757270605526}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2882202534721410081 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6506625859749726967, guid: c3efe6b7a432bc14489ca696458f08eb, type: 3}
+  m_PrefabInstance: {fileID: 9057739757270605526}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437d6663605a6444bbde8d228e048c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Eye
