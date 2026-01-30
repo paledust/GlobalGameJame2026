@@ -782,6 +782,7 @@ GameObject:
   - component: {fileID: 9063553059836011789}
   - component: {fileID: 2019110712137773194}
   - component: {fileID: 7153689300312000125}
+  - component: {fileID: 2443127448248981600}
   m_Layer: 0
   m_Name: hero
   m_TagString: Untagged
@@ -852,7 +853,7 @@ MonoBehaviour:
   cursorTrans: {fileID: 0}
   faceTrans: {fileID: 856449621048659663}
   followFactor: 0.12
-  followLerp: 5
+  followLerp: 8
   rotateFade: 3
   rotateRange: 15
 --- !u!114 &9063553059836011789
@@ -906,6 +907,18 @@ MonoBehaviour:
   joint_C: {fileID: 6169033411003659949}
   isLeft: 0
   IK_target: {fileID: 6295734468532802964}
+--- !u!114 &2443127448248981600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092801537362987464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd21f70a87b944d98eee5800ca1dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MotionControl
 --- !u!1 &4110676623588141201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,7 +1364,7 @@ GameObject:
   - component: {fileID: 2844832271350150144}
   - component: {fileID: 6984815218598564733}
   m_Layer: 0
-  m_Name: mask_01_0
+  m_Name: mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
