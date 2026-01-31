@@ -53,6 +53,7 @@ MonoBehaviour:
   playerRigid: {fileID: 0}
   BalanceDegree: 1
   LerpSpeed: 7
+  speedLimit: 2
 --- !u!114 &2184036850467529012
 MonoBehaviour:
   m_ObjectHideFlags: 0

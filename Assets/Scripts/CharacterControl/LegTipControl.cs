@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -18,17 +19,16 @@ public class LegTipControl : MonoBehaviour
     [Header("Step")]
     [SerializeField] private float stepHeight = 0.2f;
     [SerializeField] private float stepDuration = 0.2f;
-    Vector3 rightTipPos;
-    Vector3 leftTipPos;
-    Vector3 centerPos;
+    private Vector3 rightTipPos;
+    private Vector3 leftTipPos;
+    private Vector3 centerPos;
+    public Action OnStepDown;
     void Start()
     {
         rightTipPos = RightLegTip.position;
         leftTipPos  = LeftLegTip.position;
         centerPos = (rightTipPos+leftTipPos)/2f;
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(Mathf.Abs(playerRigid.position.x-centerPos.x)>BalanceDegree){
@@ -51,6 +51,6 @@ public class LegTipControl : MonoBehaviour
     void MoveTransToPos(Transform trans,Vector3 targetPos)
     {
         trans.DOKill();
-        trans.DOJump(targetPos, stepHeight, 1, stepDuration, false);
+        trans.DOJump(targetPos, stepHeight, 1, stepDuration, false).OnComplete(() => OnStepDown?.Invoke());
     }
 }

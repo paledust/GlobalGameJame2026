@@ -1687,7 +1687,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2136244617260504413, guid: 418426172407c6c4aa6bbc814f8a8961, type: 3}
       propertyPath: m_Name
-      value: hero_ik
+      value: giant_ik
       objectReference: {fileID: 0}
     - target: {fileID: 2184036850467529012, guid: 418426172407c6c4aa6bbc814f8a8961, type: 3}
       propertyPath: stepHeight
@@ -1707,7 +1707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2184036850467529012, guid: 418426172407c6c4aa6bbc814f8a8961, type: 3}
       propertyPath: BalanceDegree
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3116579289693573308, guid: 418426172407c6c4aa6bbc814f8a8961, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1768,7 +1768,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2136244617260504413, guid: 418426172407c6c4aa6bbc814f8a8961, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1932976917}
+    - targetCorrespondingSourceObject: {fileID: 2136244617260504413, guid: 418426172407c6c4aa6bbc814f8a8961, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1932976918}
   m_SourcePrefab: {fileID: 100100000, guid: 418426172407c6c4aa6bbc814f8a8961, type: 3}
 --- !u!4 &646098328 stripped
 Transform:
@@ -1883,7 +1889,7 @@ PrefabInstance:
       objectReference: {fileID: 646098330}
     - target: {fileID: 4092801537362987464, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
       propertyPath: m_Name
-      value: hero
+      value: giant
       objectReference: {fileID: 0}
     - target: {fileID: 4092801537362987464, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
       propertyPath: m_TagString
@@ -3609,6 +3615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592089376}
   - component: {fileID: 1592089377}
+  - component: {fileID: 1592089378}
   m_Layer: 0
   m_Name: vc_main
   m_TagString: Untagged
@@ -3677,6 +3684,30 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1592089378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592089375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineImpulseListener
+  ApplyAfter: 2
+  ChannelMask: 1
+  Gain: 1
+  Use2DDistance: 1
+  UseCameraSpace: 1
+  SignalCombinationMode: 0
+  ReactionSettings:
+    m_SecondaryNoise: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    Duration: 1
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1623308447
 GameObject:
   m_ObjectHideFlags: 0
@@ -4344,6 +4375,91 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7238029136793397024, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
   m_PrefabInstance: {fileID: 1917628396}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1932976914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2136244617260504413, guid: 418426172407c6c4aa6bbc814f8a8961, type: 3}
+  m_PrefabInstance: {fileID: 646098327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1932976915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2184036850467529012, guid: 418426172407c6c4aa6bbc814f8a8961, type: 3}
+  m_PrefabInstance: {fileID: 646098327}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932976914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4bb9d2a24e67f439af7f5c4e88070d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LegTipControl
+--- !u!114 &1932976917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932976914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineImpulseSource
+  ImpulseDefinition:
+    ImpulseChannel: 1
+    ImpulseShape: 2
+    CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ImpulseDuration: 0.2
+    ImpulseType: 0
+    DissipationRate: 0.25
+    RawSignal: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    RepeatMode: 0
+    Randomize: 1
+    TimeEnvelope:
+      AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      AttackTime: 0
+      SustainTime: 0.2
+      DecayTime: 0.7
+      ScaleWithImpact: 1
+      HoldForever: 0
+    ImpactRadius: 100
+    DirectionMode: 0
+    DissipationMode: 2
+    DissipationDistance: 100
+    PropagationSpeed: 343
+  DefaultVelocity: {x: 0.5, y: -0.4, z: 0}
+--- !u!114 &1932976918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932976914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1bb9ba01ea6348b31a6c42f221cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GiantFootStep
+  cinemachineImpulseSource: {fileID: 1932976917}
+  legTipControl: {fileID: 1932976915}
+  giantTrans: {fileID: 784053656}
+  impulseFadeDistance: 10
 --- !u!1 &1967825178
 GameObject:
   m_ObjectHideFlags: 0
