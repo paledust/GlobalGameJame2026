@@ -6,7 +6,7 @@ public class ShyMask : MonoBehaviour
     [Header("Body")]
     [SerializeField] private Transform bodyTrans;
     [SerializeField] private float bodyRotation;
-    [SerializeField] private float rootMoveDistance;
+    [SerializeField] private Vector2 rootMoveDistanceRange;
     [Header("Head")]
     [SerializeField] private Transform headTrans;
     [SerializeField] private Vector2 headRotateDelay;
@@ -15,9 +15,11 @@ public class ShyMask : MonoBehaviour
     private float headTimer = 0;
     private float headDelay;
     private float nextHeadAngle;
+    private Vector3 initPos;
 
     void Start()
     {
+        initPos = transform.position;
         nextHeadAngle = Random.Range(headRotateAngle.x, headRotateAngle.y);
         headDelay = Random.Range(headRotateDelay.x, headRotateDelay.y);
     }
@@ -41,7 +43,8 @@ public class ShyMask : MonoBehaviour
         float angle = Mathf.Sign(-direction.x) * bodyRotation;
         bodyTrans.DOKill();
         bodyTrans.DORotateQuaternion(Quaternion.Euler(0,0,angle), 2f);
-        bodyTrans.DOMove(Mathf.Sign(direction.x) * rootMoveDistance * Vector3.right, 2f);
+        transform.DOKill();
+        transform.DOMove(initPos + Mathf.Sign(direction.x) * Random.Range(rootMoveDistanceRange.x, rootMoveDistanceRange.y) * Vector3.right, 2f);
     }
     public void HideBack()
     {

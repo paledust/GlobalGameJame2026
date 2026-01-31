@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2722759706096222983, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722759706096222983, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722759706096222983, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7018210280524836785, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_Name
       value: mask_shy_front
