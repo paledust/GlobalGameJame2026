@@ -24,14 +24,22 @@ public class Eye : MonoBehaviour
         if(isClosed)
             return;
         isClosed = true;
-        transform.DOKill();
-        transform.DOScale(new Vector3(initScale.x * 1.5f, initScale.y * 0.2f, initScale.z), 0.1f).SetEase(Ease.OutBack);
+        OnCloseEye();
     }
     public void OpenEye()
     {
         if(!isClosed)
             return;
         isClosed = false;
+        OnOpenEye();
+    }
+    protected virtual void OnCloseEye()
+    {
+        transform.DOKill();
+        transform.DOScale(new Vector3(initScale.x * 1.5f, initScale.y * 0.2f, initScale.z), 0.1f).SetEase(Ease.OutBack);
+    }
+    protected virtual void OnOpenEye()
+    {
         transform.DOKill();
         transform.DOScale(initScale, 0.1f).SetEase(Ease.OutBack);
     }

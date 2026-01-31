@@ -23,6 +23,11 @@ public static class EventHandler
     public static event Action<string> E_OnSwitchSight;
     public static void Call_OnSwitchSight(string sightID)=>E_OnSwitchSight?.Invoke(sightID);
     #endregion
+
+    #region Level Progression
+    public static event Action E_OnSingleEyeIntroEnd;
+    public static void Call_OnSingleEyeIntroEnd()=>E_OnSingleEyeIntroEnd?.Invoke();
+    #endregion
 }
 
 //A More Strict Event System

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: AudioInfo_SO
   m_EditorClassIdentifier: 
   bgm_info_list: []
-  amb_info_list: []
+  amb_info_list:
+  - audio_name: amb_rainy
+    audio_clip: {fileID: 8300000, guid: 61f2fbb9c51aff74cacdcf2b58b5b61d, type: 3}
   sfx_info_list: []
   sfx_group_info_list: []
