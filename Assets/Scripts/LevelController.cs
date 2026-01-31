@@ -47,12 +47,17 @@ public class LevelController : MonoBehaviour
     {
         if(progressionIndex>=levelProgressions.Length) 
             return;
-        levelProgressions[progressionIndex].endDirector.Play();
+        if(levelProgressions[progressionIndex].endDirector!=null)
+            levelProgressions[progressionIndex].endDirector.Play();
         progressionIndex ++;
     }
-    [ContextMenu("Debug_Start_At_Index_Level")]
-    public void StartAtIndexLevel()
+    [ContextMenu("MatchSceneToIndex")]
+    public void MatchSceneToIndex()
     {
+        foreach(var level in levelProgressions)
+        {
+            level.UnloadLevel();
+        }
         progressionIndex = startIndex;
         levelProgressions[progressionIndex].LoadLevel(false);
     }
