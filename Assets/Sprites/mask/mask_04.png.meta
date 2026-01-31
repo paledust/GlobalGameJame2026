@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f3a5804d1bd511749aba4edc59531e18
+guid: 83db0a7f3c31a094c882ebcb8a09b58e
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -50,8 +50,8 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 9
-  spritePivot: {x: 0.55788094, y: 0.4646534}
-  spritePixelsToUnits: 300
+  spritePivot: {x: 0.58420223, y: 0.4156996}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -129,12 +129,12 @@ TextureImporter:
       name: mask_04_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 72
-        width: 401
-        height: 676
-      alignment: 9
-      pivot: {x: 0.5824126, y: 0.34286377}
+        x: 0
+        y: 0
+        width: 178
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -151,8 +151,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 06748145a9d0ebd4a8f87c85224dd454
-    internalID: -263003782
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
