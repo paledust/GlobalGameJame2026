@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 7238029136793397024}
   - component: {fileID: 1993368796216559334}
   - component: {fileID: 4950818839793458441}
+  - component: {fileID: 8471225066129286354}
   m_Layer: 0
   m_Name: mask_shy
   m_TagString: Untagged
@@ -78,12 +79,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f90eeb0cd9882c44965146f5d06a44b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShyMask
+  currentState: 0
   bodyTrans: {fileID: 52884523140983866}
   bodyRotation: 45
   rootMoveDistanceRange: {x: 0.4, y: 0.6}
   headTrans: {fileID: 6095564924372257154}
+  headRotateCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2.0224748
+      outSlope: 2.0224748
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.06564245
+    - serializedVersion: 3
+      time: 0.13957256
+      value: 0.2986862
+      inSlope: 0.2790148
+      outSlope: 0.2790148
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.15058826
+    - serializedVersion: 3
+      time: 0.75527567
+      value: 0.43995702
+      inSlope: 0.5256542
+      outSlope: 0.5256542
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15828162
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 3.3215897
+      outSlope: 3.3215897
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.103338875
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   headRotateDelay: {x: 6, y: 4}
   headRotateAngle: {x: 10, y: 30}
+  reachOutDelay: {x: 3, y: 5}
+  shockAnime: {fileID: 8471225066129286354}
+  gemParent: {fileID: 6095564924372257154}
 --- !u!210 &4950818839793458441
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -96,6 +143,23 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: -2
   m_SortAtRoot: 0
+--- !u!111 &8471225066129286354
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7018210280524836785}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: a04e3893a29440c428ffefde850d41a3, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: a04e3893a29440c428ffefde850d41a3, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &8472051877763115586
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,12 +187,12 @@ Transform:
   m_GameObject: {fileID: 8472051877763115586}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.045154564, y: 0.78046453, z: 0}
+  m_LocalPosition: {x: 0.045155235, y: 0.78046453, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7238029136793397024}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.968}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2722759706096222983
 SpriteRenderer:
   m_ObjectHideFlags: 0

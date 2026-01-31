@@ -1,5 +1,8 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
+
+using Random = UnityEngine.Random;
 
 public class ShyMask : MonoBehaviour
 {
@@ -17,18 +20,27 @@ public class ShyMask : MonoBehaviour
 
     [Header("Head")]
     [SerializeField] private Transform headTrans;
+    [SerializeField] private AnimationCurve headRotateCurve;
     [SerializeField] private Vector2 headRotateDelay;
     [SerializeField] private Vector2 headRotateAngle;
 
     [Header("hide and seek")]
     [SerializeField] private Vector2 reachOutDelay;
+    [SerializeField] private Animation shockAnime;
+
+    [Header("Gem")]
+    [SerializeField] private Transform gemParent;
     
     private float stateTimer = 0;
     private float rotateDelay;
     private float reacahOutDelay;
     private float nextHeadAngle;
+    private bool isUnprepared;
     private Vector3 initPos;
     private FaceControl heroFace;
+    private ItemGem holdingGem;
+    private Action returnGemAction;
+    public bool IsIdle()=>currentState == ShyMaskState.Idle;
 
     void Start()
     {
@@ -36,6 +48,13 @@ public class ShyMask : MonoBehaviour
         nextHeadAngle = Random.Range(headRotateAngle.x, headRotateAngle.y);
         rotateDelay = Random.Range(headRotateDelay.x, headRotateDelay.y);
         reacahOutDelay = Random.Range(reachOutDelay.x, reachOutDelay.y);
+    }
+    public void HoldGem(ItemGem gem, Action returnAction)
+    {
+        holdingGem = gem;
+        this.returnGemAction = returnAction;
+        gem.transform.SetParent(gemParent);
+        gem.transform.localPosition = Vector3.up*1.6f;
     }
     void Update()
     {
@@ -66,23 +85,39 @@ public class ShyMask : MonoBehaviour
                 if(stateTimer >= rotateDelay)
                 {
                     stateTimer = 0;
+                    isUnprepared = true;
                     nextHeadAngle = -Mathf.Sign(nextHeadAngle) * Random.Range(headRotateAngle.x, headRotateAngle.y);
                     headTrans.DOKill();
-                    headTrans.DORotate(nextHeadAngle * Vector3.forward, 0.25f).SetEase(Ease.OutQuad);
+                    headTrans.DORotate(nextHeadAngle * Vector3.forward, 1f).SetEase(headRotateCurve).OnComplete(()=>isUnprepared = false);
                 }
 
                 Vector2 diff = transform.position - heroFace.transform.position;
                 if(!CheckGaze())
                 {
                     currentState = ShyMaskState.HideBack;
-                    bodyTrans.DOKill();
-                    bodyTrans.DORotateQuaternion(Quaternion.Euler(0,0,0), 0.25f).SetEase(Ease.OutQuad);
-                    transform.DOKill();
-                    transform.DOMove(initPos, .25f).SetEase(Ease.OutQuad).OnComplete(()=>{
-                        stateTimer = 0;
-                        reacahOutDelay = Random.Range(reachOutDelay.x, reachOutDelay.y);
-                        currentState = ShyMaskState.Idle;
-                    });
+                    if(isUnprepared)
+                    {
+                        isUnprepared = false;
+                        shockAnime.Play();
+                        if(holdingGem != null)
+                        {
+                            var gem = this.holdingGem;
+                            gem.transform.SetParent(null);
+                            gem.transform.DOMove(transform.position + Vector3.up * 3f, 0.25f).SetEase(Ease.OutQuad).OnComplete(() =>
+                            {
+                                gem.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                            });
+                            holdingGem = null;
+                        }
+                        break;
+                    }
+                    if(holdingGem!=null)
+                    {
+                        returnGemAction?.Invoke();
+                    }
+                    returnGemAction = null;
+                    holdingGem = null;
+                    HideOut();
                 }
                 break;
             case ShyMaskState.HideBack:
@@ -102,4 +137,16 @@ public class ShyMask : MonoBehaviour
         }
         return false;
     }
+    public void HideOut()
+    {
+        bodyTrans.DOKill();
+        bodyTrans.DORotateQuaternion(Quaternion.Euler(0,0,0), 0.25f).SetEase(Ease.OutQuad);
+        transform.DOKill();
+        transform.DOMove(initPos, .25f).SetEase(Ease.OutQuad).OnComplete(()=>{
+            stateTimer = 0;
+            reacahOutDelay = Random.Range(reachOutDelay.x, reachOutDelay.y);
+            currentState = ShyMaskState.Idle;
+        });   
+    }
+    public void AE_HideOut()=>HideOut();
 }
