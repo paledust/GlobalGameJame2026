@@ -46,7 +46,7 @@ public class LegTipControl : MonoBehaviour
     }
     Vector2 GetRayCastPos(Vector2 refPos)
     {
-        return Physics2D.Raycast(refPos + Vector2.up * 5f, Vector2.down, 10f, 1 << Service.PlatformLayer).point;
+        return Physics2D.Raycast(refPos + Vector2.up * 1f, Vector2.down, 10f, 1 << Service.PlatformLayer).point;
     }
     void MoveTransToPos(Transform trans,Vector3 targetPos)
     {
