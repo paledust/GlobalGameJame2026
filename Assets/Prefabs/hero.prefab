@@ -819,7 +819,7 @@ GameObject:
   - component: {fileID: 2607706830413334066}
   m_Layer: 0
   m_Name: hero
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -977,6 +977,7 @@ MonoBehaviour:
   followRadius: 0.8
   followLerp: 8
   rotateFade: 3
+  rotateLimit: 20
 --- !u!114 &9063553059836011789
 MonoBehaviour:
   m_ObjectHideFlags: 0
