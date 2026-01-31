@@ -126,7 +126,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  headRotateDelay: {x: 6, y: 4}
+  headRotateDelay: {x: 1, y: 3}
   headRotateAngle: {x: 10, y: 30}
   reachOutDelay: {x: 3, y: 5}
   shockAnime: {fileID: 8471225066129286354}

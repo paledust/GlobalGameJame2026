@@ -23,14 +23,16 @@ public class LevelController : MonoBehaviour
         }
     }
 
-    [SerializeField] private string amb_start;
     [SerializeField] private int startIndex;
     [SerializeField] private LevelProgression[] levelProgressions;
+    [Header("Audio")]
+    [SerializeField] private string amb_start;
+    [SerializeField] private float amb_volume = 0.1f;
     private int progressionIndex = 0;
 
     void Start()
     {
-        AudioManager.Instance.PlayAmbience(amb_start, true, 0.5f, 1);
+        AudioManager.Instance.PlayAmbience(amb_start, true, 0.1f, amb_volume);
         foreach(var level in levelProgressions)
         {
             level.UnloadLevel();

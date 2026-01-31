@@ -705,7 +705,7 @@ Transform:
   m_GameObject: {fileID: 2777346011207603355}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.3769997, z: 0}
+  m_LocalPosition: {x: 0, y: 1.3769997, z: 0.42}
   m_LocalScale: {x: 0.34996533, y: 0.34996533, z: 0.34996533}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -779,10 +779,10 @@ ParentConstraint:
   m_Enabled: 1
   serializedVersion: 2
   m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 1.088, z: 0}
+  m_TranslationAtRest: {x: 0, y: 1.3769995, z: 0.42}
   m_RotationAtRest: {x: 0, y: 0, z: 0}
   m_TranslationOffsets:
-  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0.42}
   m_RotationOffsets:
   - {x: 0, y: 0, z: 0}
   m_AffectTranslationX: 1
@@ -792,7 +792,7 @@ ParentConstraint:
   m_AffectRotationY: 1
   m_AffectRotationZ: 1
   m_Active: 1
-  m_IsLocked: 1
+  m_IsLocked: 0
   m_Sources:
   - sourceTransform: {fileID: 1330215039357437712}
     weight: 1
