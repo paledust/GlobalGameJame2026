@@ -8,12 +8,18 @@ public class ItemContainer : MonoBehaviour
     public void StoreItem(Item item)
     {
         if (item == null) return;
-        items.Add(item);
+        if(items.Add(item))
+        {
+            item.OnPicked(this.gameObject);
+        }
     }
     public void PopItem(Item item)
     {
         if (item == null) return;
-        items.Remove(item);
+        if(items.Remove(item))
+        {
+            item.OnDropped(this.gameObject);
+        }
     }
     public bool HasItem(string key, out Item item)
     {

@@ -15,11 +15,14 @@ public class ItemPicker : MonoBehaviour
     [SerializeField] private float readyHeight = 0.61f;
     [SerializeField] private float pickHeight = 0.4f;
     [SerializeField, ShowOnly] private PickerState pickerState;
+
     [Header("Container Settings")]
     [SerializeField] private ItemContainer itemContainer;
+    private AnimationControl animationControl;
     private HashSet<ItemBasic> pendingItems = new HashSet<ItemBasic>();
     void Start()
     {
+        animationControl = GetComponentInParent<AnimationControl>();
         pendingItems = new HashSet<ItemBasic>();
         pickerState = PickerState.Idle;
     }
@@ -42,12 +45,21 @@ public class ItemPicker : MonoBehaviour
                 }
                 break;
             case PickerState.Picking:
+                bool pickFlag = false;
                 foreach(var itemBasic in pendingItems.ToArray())
                 {
+                    if(!pickFlag)
+                        pickFlag = true;
                     itemBasic.OnPickUp();
+                    itemContainer.StoreItem(itemBasic.GetItem());
                     Destroy(itemBasic.gameObject);
                 }
                 pendingItems.Clear();
+
+                if(pickFlag)
+                {
+                    animationControl.TriggerHappy();
+                }
                 pickerState = PickerState.Idle;
                 break;
         }
