@@ -32,23 +32,19 @@ public class EyeControl : MonoBehaviour
     }
     public void CheckEye(int index)
     {
+        foreach(var eye in eyes)
+        {
+            eye.BlinkEye();
+        }
         switch(index)
         {
             case 0:
                 EventHandler.Call_OnBothEye();
-                foreach(var eye in eyes)
-                {
-                    eye.OpenEye();
-                }
                 break;
             case 1:
-                eyes[0].OpenEye();
-                eyes[1].CloseEye();
                 EventHandler.Call_OnSwitchSight(sightIDs[index-1]);
                 break;
             case 2:
-                eyes[0].CloseEye();
-                eyes[1].OpenEye();
                 EventHandler.Call_OnSwitchSight(sightIDs[index-1]);
                 break;
 

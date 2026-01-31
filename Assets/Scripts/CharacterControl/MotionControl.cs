@@ -8,6 +8,7 @@ public class MotionControl : MonoBehaviour
     [SerializeField] private Rigidbody2D playerRigid;
     [SerializeField] private float BalanceDegree;
     [SerializeField] private float LerpSpeed;
+    [SerializeField] private float speedLimit = 10;
 
     Vector3 targetPos;
 
@@ -23,6 +24,6 @@ public class MotionControl : MonoBehaviour
         if(Mathf.Abs(playerRigid.position.x-followTrans.position.x)>=BalanceDegree){
             targetPos.x = playerRigid.position.x + (followTrans.position.x - playerRigid.position.x) * ratio;
         }
-        playerRigid.linearVelocityX = (targetPos.x - playerRigid.position.x) * LerpSpeed;
+        playerRigid.linearVelocityX = Mathf.Clamp((targetPos.x - playerRigid.position.x) * LerpSpeed, -speedLimit, speedLimit);
     }
 }

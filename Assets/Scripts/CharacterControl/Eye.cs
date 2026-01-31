@@ -33,6 +33,14 @@ public class Eye : MonoBehaviour
         isClosed = false;
         OnOpenEye();
     }
+    public void BlinkEye()
+    {
+        transform.DOKill();
+        transform.DOScale(new Vector3(initScale.x * 1.5f, initScale.y * 0.2f, initScale.z), Random.Range(0.25f, 0.3f)).SetEase(Ease.OutBack).OnComplete(() =>
+        {
+            transform.DOScale(initScale, Random.Range(0.15f, 0.25f)).SetEase(Ease.OutBack);
+        });
+    }
     protected virtual void OnCloseEye()
     {
         transform.DOKill();
