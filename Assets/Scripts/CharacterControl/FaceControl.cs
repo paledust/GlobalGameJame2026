@@ -33,4 +33,8 @@ public class FaceControl : MonoBehaviour
         faceTrans.localPosition = Vector3.Lerp(faceTrans.localPosition, targetPos, Time.deltaTime * followLerp);
         faceTrans.localRotation = Quaternion.Slerp(faceTrans.localRotation, target, Time.deltaTime * followLerp);
     }
+    public Vector3 GetFaceDirection()
+    {
+        return cursorTrans.position - faceTrans.position;
+    }
 }

@@ -5,12 +5,12 @@ public class ShyMaskController : MonoBehaviour
 {
     [SerializeField] private List<ShyMask> shyMasks;
     [SerializeField] private List<ShyMask> shyMasksFront;
-    [SerializeField] private Transform heroTrans;
+    [SerializeField] private FaceControl heroFace;
     public void StartShyMaskAppearance()
     {
         foreach(var shyMask in shyMasks)
         {
-            shyMask.Activate(heroTrans);
+            shyMask.Activate(heroFace);
         }
     }
 }

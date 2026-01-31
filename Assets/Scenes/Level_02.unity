@@ -1031,6 +1031,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1157296617}
     m_Modifications:
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6095564924372257154, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.04515497
@@ -1124,6 +1132,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1157296617}
     m_Modifications:
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4950818839793458441, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -1225,6 +1241,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1157296617}
     m_Modifications:
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4950818839793458441, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -1725,6 +1749,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1157296617}
     m_Modifications:
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6095564924372257154, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.04515497
@@ -2685,6 +2717,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1157296617}
     m_Modifications:
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6095564924372257154, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.04515497
@@ -3399,7 +3439,7 @@ MonoBehaviour:
   - {fileID: 1052801061}
   - {fileID: 1013027001}
   - {fileID: 83298571}
-  heroTrans: {fileID: 1051969956}
+  heroFace: {fileID: 1919005655}
 --- !u!1001 &1167860618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4047,6 +4087,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1157296617}
     m_Modifications:
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4950818839793458441, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -5522,6 +5570,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1157296617}
     m_Modifications:
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6095564924372257154, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.045154292
@@ -5612,6 +5668,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4092801537362987464, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
   m_PrefabInstance: {fileID: 9053735977303340904}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1919005655 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6499775727317704859, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
+  m_PrefabInstance: {fileID: 9053735977303340904}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919005648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7dcee8fe7de2e41b97596a24ac692a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FaceControl
 --- !u!114 &1919005660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5838,6 +5905,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1157296617}
     m_Modifications:
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6095564924372257154, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.04515497
@@ -6369,6 +6444,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1157296617}
     m_Modifications:
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
+      propertyPath: reachOutDelay.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6095564924372257154, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.045154564

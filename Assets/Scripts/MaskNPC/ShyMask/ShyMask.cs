@@ -23,59 +23,83 @@ public class ShyMask : MonoBehaviour
     [Header("hide and seek")]
     [SerializeField] private Vector2 reachOutDelay;
     
-    private float headTimer = 0;
-    private float headDelay;
+    private float stateTimer = 0;
+    private float rotateDelay;
+    private float reacahOutDelay;
     private float nextHeadAngle;
     private Vector3 initPos;
-    private Transform playerTrans;
+    private FaceControl heroFace;
 
     void Start()
     {
         initPos = transform.position;
         nextHeadAngle = Random.Range(headRotateAngle.x, headRotateAngle.y);
-        headDelay = Random.Range(headRotateDelay.x, headRotateDelay.y);
+        rotateDelay = Random.Range(headRotateDelay.x, headRotateDelay.y);
+        reacahOutDelay = Random.Range(reachOutDelay.x, reachOutDelay.y);
     }
     void Update()
     {
         switch(currentState)
         {
             case ShyMaskState.Idle:
+                if(heroFace != null)
+                {
+                    if(CheckGaze())
+                    {
+                        stateTimer += Time.deltaTime;
+                        if(stateTimer > reacahOutDelay)
+                        {
+                            stateTimer = 0;
+                            Vector2 direction = heroFace.transform.position - transform.position;
+                            float angle = Mathf.Sign(-direction.x) * bodyRotation;
+                            bodyTrans.DOKill();
+                            bodyTrans.DORotateQuaternion(Quaternion.Euler(0,0,angle), 0.25f).SetEase(Ease.OutBack);
+                            transform.DOKill();
+                            transform.DOMove(initPos + Mathf.Sign(direction.x) * Random.Range(rootMoveDistanceRange.x, rootMoveDistanceRange.y) * Vector3.right, .25f).SetEase(Ease.OutBack);
+                            currentState = ShyMaskState.ReachedOut;
+                        }
+                    }
+                }
                 break;
             case ShyMaskState.ReachedOut:
-                headTimer += Time.deltaTime;
-                if(headTimer > headDelay)
+                stateTimer += Time.deltaTime;
+                if(stateTimer >= rotateDelay)
                 {
-                    headTimer = 0;
+                    stateTimer = 0;
                     nextHeadAngle = -Mathf.Sign(nextHeadAngle) * Random.Range(headRotateAngle.x, headRotateAngle.y);
                     headTrans.DOKill();
                     headTrans.DORotate(nextHeadAngle * Vector3.forward, 0.25f).SetEase(Ease.OutQuad);
+                }
+
+                Vector2 diff = transform.position - heroFace.transform.position;
+                if(!CheckGaze())
+                {
+                    currentState = ShyMaskState.HideBack;
+                    bodyTrans.DOKill();
+                    bodyTrans.DORotateQuaternion(Quaternion.Euler(0,0,0), 0.25f).SetEase(Ease.OutQuad);
+                    transform.DOKill();
+                    transform.DOMove(initPos, .25f).SetEase(Ease.OutQuad).OnComplete(()=>{
+                        stateTimer = 0;
+                        reacahOutDelay = Random.Range(reachOutDelay.x, reachOutDelay.y);
+                        currentState = ShyMaskState.Idle;
+                    });
                 }
                 break;
             case ShyMaskState.HideBack:
                 break;
         }
     }
-    public void Activate(Transform playerTrans)
+    public void Activate(FaceControl heroFace)
     {
-        this.playerTrans = playerTrans;
+        this.heroFace = heroFace;
     }
-    void ReachOut(Vector3 direction)
+    bool CheckGaze()
     {
-        currentState = ShyMaskState.ReachedOut;
-        float angle = Mathf.Sign(-direction.x) * bodyRotation;
-        bodyTrans.DOKill();
-        bodyTrans.DORotateQuaternion(Quaternion.Euler(0,0,angle), 0.25f).SetEase(Ease.OutBack);
-        transform.DOKill();
-        transform.DOMove(initPos + Mathf.Sign(direction.x) * Random.Range(rootMoveDistanceRange.x, rootMoveDistanceRange.y) * Vector3.right, .25f).SetEase(Ease.OutBack);
-    }
-    void HideBack()
-    {
-        currentState = ShyMaskState.HideBack;
-        bodyTrans.DOKill();
-        bodyTrans.DORotateQuaternion(Quaternion.Euler(0,0,0), 0.25f).SetEase(Ease.OutQuad);
-        transform.DOKill();
-        transform.DOMove(initPos, .25f).SetEase(Ease.OutQuad).OnComplete(()=>{
-            currentState = ShyMaskState.Idle;
-        });
+        Vector2 diff = transform.position - heroFace.transform.position;
+        if(Vector3.Dot(diff.normalized, heroFace.GetFaceDirection().normalized) < 0.2f)
+        {
+            return true;
+        }
+        return false;
     }
 }
