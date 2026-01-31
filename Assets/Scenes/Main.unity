@@ -2740,14 +2740,6 @@ PrefabInstance:
       propertyPath: m_Sources.Array.data[0].sourceTransform
       value: 
       objectReference: {fileID: 1551723889}
-    - target: {fileID: 4431132984757110108, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.008482784
-      objectReference: {fileID: 0}
-    - target: {fileID: 4431132984757110108, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.19828255
-      objectReference: {fileID: 0}
     - target: {fileID: 6499775727317704859, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
       propertyPath: cursorTrans
       value: 
@@ -2760,14 +2752,6 @@ PrefabInstance:
       propertyPath: IK_target
       value: 
       objectReference: {fileID: 1756065759}
-    - target: {fileID: 8489330259083585825, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.17090002
-      objectReference: {fileID: 0}
-    - target: {fileID: 8489330259083585825, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.7309997
-      objectReference: {fileID: 0}
     - target: {fileID: 8850301258542400144, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
       propertyPath: m_Sources.Array.data[0].sourceTransform
       value: 
