@@ -6,6 +6,7 @@ using UnityEngine;
 public static class Service{
     public static int InteractableLayer = LayerMask.NameToLayer("Interactable");
     public static int IgnoreRaycastLayer = LayerMask.NameToLayer("Ignore Raycast");
+    public static int PlatformLayer = LayerMask.NameToLayer("Platform");
 #region HelperFunction
     /// <summary>
     /// Return a list of all active and inactive objects of T type in loaded scenes.
