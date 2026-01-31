@@ -14,15 +14,17 @@ public class Gem : Item
 {
     public GameObject prefabEyeStone{get; private set;}
     private EyeControl eyeControl;
-    public Gem(string key, GameObject prefabEyeStone) : base(key)
+    private string sightKey;
+    public Gem(string key, string sightKey, GameObject prefabEyeStone) : base(key)
     {
+        this.sightKey = sightKey;
         this.prefabEyeStone = prefabEyeStone;
     }
     public override void OnPicked(GameObject picker)
     {
         base.OnPicked(picker);
         eyeControl = picker.GetComponent<EyeControl>();
-        eyeControl.InsertEyeStone(prefabEyeStone, itemKey);
+        eyeControl.InsertEyeStone(prefabEyeStone, sightKey);
     }
     public override void OnDropped(GameObject picker)
     {

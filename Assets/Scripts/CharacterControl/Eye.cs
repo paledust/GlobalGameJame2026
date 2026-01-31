@@ -3,6 +3,7 @@ using UnityEngine;
 public class Eye : MonoBehaviour
 {
     [SerializeField] private float followRadius = 0.2f;
+    [SerializeField] private float followFactor = 1f;
     private Vector3 startPos;
     private Vector3 initScale;
     private bool isClosed;
@@ -16,7 +17,7 @@ public class Eye : MonoBehaviour
     {
         Vector3 localPos = transform.parent.InverseTransformPoint(targetPos);
         localPos.z = startPos.z;
-        transform.localPosition = startPos + Vector3.ClampMagnitude(localPos - startPos, followRadius);
+        transform.localPosition = startPos + Vector3.ClampMagnitude((localPos - startPos)* followFactor, followRadius);
     }
     public void CloseEye()
     {

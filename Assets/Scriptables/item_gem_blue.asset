@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: item_gem_blue
   m_EditorClassIdentifier: Assembly-CSharp::ItemGemSO
   itemKey: item_gem_blue
+  sightKey: sight_blue
   prefabEyeStone: {fileID: 3215796107939578846, guid: 0fb251d30f4cc9641af4b8c4e652c9c4, type: 3}
