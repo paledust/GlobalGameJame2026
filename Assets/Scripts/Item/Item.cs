@@ -22,7 +22,7 @@ public class Gem : Item
     {
         base.OnPicked(picker);
         eyeControl = picker.GetComponent<EyeControl>();
-        eyeControl.InsertEyeStone(prefabEyeStone);
+        eyeControl.InsertEyeStone(prefabEyeStone, itemKey);
     }
     public override void OnDropped(GameObject picker)
     {

@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
         PointerScrPos = _scrPos;
     }
     void OnFire(InputAction.CallbackContext context){
-        EventHandler.Call_OnCloseEye();
+        EventHandler.Call_OnSwitchEye();
         PlayerManager.Instance.UpdateCursorState(CURSOR_STATE.Click);
         if(m_holdingInteractable != null) return;
         if(m_hoveringInteractable == null) return;

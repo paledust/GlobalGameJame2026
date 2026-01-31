@@ -5,11 +5,11 @@ public class VFXController : MonoBehaviour
     [SerializeField] private ParticleSystem clickVFX;
     void Start()
     {
-        EventHandler.E_OnCloseEye += OnCloseEye;
+        EventHandler.E_OnSwitchEye += OnCloseEye;
     }
     void OnDestroy()
     {
-        EventHandler.E_OnCloseEye -= OnCloseEye;
+        EventHandler.E_OnSwitchEye -= OnCloseEye;
     }
     void OnCloseEye()
     {

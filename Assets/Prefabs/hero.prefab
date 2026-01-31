@@ -1137,7 +1137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ace7dd5d8fb69439b9a3100bf58966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SightController
-  eyeControl: {fileID: 0}
+  eyeControl: {fileID: 6808818247340104952}
+  MaxSight: 3
 --- !u!1 &4110676623588141201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,7 +1889,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6357775762664607944, guid: c3efe6b7a432bc14489ca696458f08eb, type: 3}
       propertyPath: m_Name
-      value: eyes (4)
+      value: eyes_r
       objectReference: {fileID: 0}
     - target: {fileID: 7235840767940460896, guid: c3efe6b7a432bc14489ca696458f08eb, type: 3}
       propertyPath: m_LocalScale.x
@@ -1977,7 +1978,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6357775762664607944, guid: c3efe6b7a432bc14489ca696458f08eb, type: 3}
       propertyPath: m_Name
-      value: eyes
+      value: eyes_l
       objectReference: {fileID: 0}
     - target: {fileID: 7235840767940460896, guid: c3efe6b7a432bc14489ca696458f08eb, type: 3}
       propertyPath: m_LocalScale.x
