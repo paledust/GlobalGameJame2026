@@ -3,7 +3,9 @@ using UnityEngine;
 public class DoubleEyeClick : MonoBehaviour
 {
     [SerializeField] private Eye[] eyes;
+    [SerializeField] private int triggerCount = 4;
     private int blinkIndex = 0;
+    private bool isEnded = false;
     void Start()
     {
         EventHandler.E_OnSwitchEye += SwichEyeMask;
@@ -32,6 +34,12 @@ public class DoubleEyeClick : MonoBehaviour
                 eyes[0].CloseEye();
                 eyes[1].OpenEye();
                 break;
+        }
+        triggerCount --;
+        if(triggerCount<=0 && !isEnded)
+        {
+            isEnded = true;
+            EventHandler.Call_OnNextGame();
         }
     }
 }

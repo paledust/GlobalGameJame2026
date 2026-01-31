@@ -25,8 +25,8 @@ public static class EventHandler
     #endregion
 
     #region Level Progression
-    public static event Action E_OnSingleEyeIntroEnd;
-    public static void Call_OnSingleEyeIntroEnd()=>E_OnSingleEyeIntroEnd?.Invoke();
+    public static event Action E_OnNextGame;
+    public static void Call_OnNextGame()=>E_OnNextGame?.Invoke();
     #endregion
 }
 

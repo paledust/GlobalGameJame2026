@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 02385367ae2cf6b42818b20b64d51452
+guid: ddcd053f77504f0499b212df85f4191a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4075904309749126048
-    second: totem_0
+      213: 4731702459875022660
+    second: "\u67F1\u5B502_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -50,7 +50,7 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 9
-  spritePivot: {x: 0.5, y: 0.063546725}
+  spritePivot: {x: 0.5526114, y: 0.11733518}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: totem_0
+      name: "\u67F1\u5B502_0"
       rect:
         serializedVersion: 2
-        x: 81
-        y: 11
-        width: 192
-        height: 558
-      alignment: 9
-      pivot: {x: 0.4423696, y: 0.03400051}
+        x: 0
+        y: 0
+        width: 111
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06c6be610aa7f67c0800000000000000
-      internalID: -4075904309749126048
+      spriteID: 44751bf41526aa140800000000000000
+      internalID: 4731702459875022660
       vertices: []
       indices: 
       edges: []
@@ -151,8 +151,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7bf99e9fe9aa32049adb66442b5170d5
-    internalID: -1265358422
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      totem_0: -4075904309749126048
+      "\u67F1\u5B502_0": 4731702459875022660
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

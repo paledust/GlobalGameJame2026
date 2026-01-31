@@ -18,7 +18,7 @@ public class SingleEyeClick : MonoBehaviour
         if(count<=0)
         {
             eyeMask.Play("intro_open");
-            EventHandler.Call_OnSingleEyeIntroEnd();
+            EventHandler.Call_OnNextGame();
             Destroy(this.gameObject);
         }
         else
