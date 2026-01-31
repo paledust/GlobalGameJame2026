@@ -10,7 +10,7 @@ public class ShyMaskController : MonoBehaviour
     {
         foreach(var shyMask in shyMasks)
         {
-            shyMask.ReachOut(heroTrans.position - shyMask.transform.position);
+            shyMask.Activate(heroTrans);
         }
     }
 }

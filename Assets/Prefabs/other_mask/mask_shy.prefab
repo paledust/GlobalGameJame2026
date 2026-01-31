@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShyMask
   bodyTrans: {fileID: 52884523140983866}
   bodyRotation: 45
-  rootMoveDistance: 0.5
+  rootMoveDistanceRange: {x: 0.4, y: 0.6}
   headTrans: {fileID: 6095564924372257154}
   headRotateDelay: {x: 6, y: 4}
   headRotateAngle: {x: 10, y: 30}
