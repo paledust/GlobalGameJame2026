@@ -36,9 +36,17 @@ public class Gem : Item
 
 public class Flower : Item
 {
+
     public GameObject flowerPrefab{get; private set;}
+    private PlayerHatControl hatControl;
     public Flower(string key, GameObject flowerPrefab) : base(key)
     {
         this.flowerPrefab = flowerPrefab;
+    }
+    public override void OnPicked(GameObject picker)
+    {
+        base.OnPicked(picker);
+        hatControl = picker.GetComponent<PlayerHatControl>();
+        hatControl.OnGrowHat(flowerPrefab);
     }
 }
