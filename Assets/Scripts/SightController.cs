@@ -7,11 +7,11 @@ public class SightController : MonoBehaviour
     private int sightIndex = 0;
     void OnEnable()
     {
-        EventHandler.E_OnSwitchEye += OnSwitchSight;
+        EventHandler.E_OnBlinkEye += OnSwitchSight;
     }
     void OnDisable()
     {
-        EventHandler.E_OnSwitchEye -= OnSwitchSight;
+        EventHandler.E_OnBlinkEye -= OnSwitchSight;
     }
     void OnSwitchSight()
     {

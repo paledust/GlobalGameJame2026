@@ -16,8 +16,8 @@ public static class EventHandler
     public static void Call_OnCompleteSave()=>E_OnCompleteSave?.Invoke();
     
     #region Interaction Event
-    public static event Action E_OnSwitchEye;
-    public static void Call_OnSwitchEye()=>E_OnSwitchEye?.Invoke();
+    public static event Action E_OnBlinkEye;
+    public static void Call_OnBlinkEye()=>E_OnBlinkEye?.Invoke();
     public static event Action E_OnBothEye;
     public static void Call_OnBothEye()=>E_OnBothEye?.Invoke();
     public static event Action<string> E_OnSwitchSight;

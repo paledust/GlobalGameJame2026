@@ -3471,7 +3471,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e9de81c0c7433d4e97b619dc5d76606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelController
-  amb_start: amb_rainy
   startIndex: 3
   levelProgressions:
   - levelAsset: {fileID: 1120754539}
@@ -3486,6 +3485,8 @@ MonoBehaviour:
   - levelAsset: {fileID: 1453371825}
     startDirector: {fileID: 0}
     endDirector: {fileID: 0}
+  amb_start: amb_rainy
+  amb_volume: 0.1
 --- !u!1 &1000759573
 GameObject:
   m_ObjectHideFlags: 0
@@ -13006,6 +13007,10 @@ PrefabInstance:
       propertyPath: m_Sources.Array.data[0].sourceTransform
       value: 
       objectReference: {fileID: 1756065759}
+    - target: {fileID: 1780925743313574830, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
+      propertyPath: m_TranslationAtRest.y
+      value: 1.3769997
+      objectReference: {fileID: 0}
     - target: {fileID: 2019110712137773194, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
       propertyPath: IK_target
       value: 

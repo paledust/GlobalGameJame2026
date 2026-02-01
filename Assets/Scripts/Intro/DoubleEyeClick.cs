@@ -8,11 +8,11 @@ public class DoubleEyeClick : MonoBehaviour
     private bool isEnded = false;
     void Start()
     {
-        EventHandler.E_OnSwitchEye += SwichEyeMask;
+        EventHandler.E_OnBlinkEye += SwichEyeMask;
     }
     void OnDestroy()
     {
-        EventHandler.E_OnSwitchEye -= SwichEyeMask;   
+        EventHandler.E_OnBlinkEye -= SwichEyeMask;   
     }
     void SwichEyeMask()
     {

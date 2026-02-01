@@ -6,11 +6,11 @@ public class SingleEyeClick : MonoBehaviour
     [SerializeField] private int count = 3;
     void Start()
     {
-        EventHandler.E_OnSwitchEye += SwichEyeMask;
+        EventHandler.E_OnBlinkEye += SwichEyeMask;
     }
     void OnDestroy()
     {
-        EventHandler.E_OnSwitchEye -= SwichEyeMask;
+        EventHandler.E_OnBlinkEye -= SwichEyeMask;
     }
     void SwichEyeMask()
     {

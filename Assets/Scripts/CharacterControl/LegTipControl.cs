@@ -31,7 +31,7 @@ public class LegTipControl : MonoBehaviour
     }
     void Update()
     {
-        if((playerRigid.position-(Vector2)centerPos).magnitude > BalanceDegree){
+        if(Mathf.Abs(playerRigid.position.x-centerPos.x) > BalanceDegree){
             if(Mathf.Abs(playerRigid.position.x-rightTipPos.x) >= Mathf.Abs(playerRigid.position.x-leftTipPos.x)){
                 rightTipPos.x = (playerRigid.position.x>centerPos.x)?playerRigid.position.x+SafeDistance:playerRigid.position.x-SafeDistance;
                 rightTipPos.y = playerRigid.position.y;
