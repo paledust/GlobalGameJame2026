@@ -1,3 +1,4 @@
+using SimpleAudioSystem;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class GiantFootStep : MonoBehaviour
     [SerializeField] private LegTipControl legTipControl;
     [SerializeField] private Transform giantTrans;
     [SerializeField] private float impulseFadeDistance = 10;
+    [SerializeField] private string footstepSFX;
+    [SerializeField] private float footstepVolume = 1f;
     void Start()
     {
         legTipControl.OnStepDown += HandleOnStepDown;
@@ -20,5 +23,6 @@ public class GiantFootStep : MonoBehaviour
         float force = 1-Mathf.Abs(giantTrans.position.x/impulseFadeDistance);
         force = Mathf.Clamp01(force);
         cinemachineImpulseSource.GenerateImpulse(force);
+        AudioManager.Instance.PlaySoundEffect(footstepSFX, footstepVolume*force);
     }
 }

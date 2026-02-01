@@ -131,6 +131,9 @@ MonoBehaviour:
   reachOutDelay: {x: 3, y: 5}
   shockAnime: {fileID: 8471225066129286354}
   gemParent: {fileID: 6095564924372257154}
+  sfxReachOut: group_blink
+  sfxHideBack: group_blink
+  sfxVolume: 0.5
 --- !u!210 &4950818839793458441
 SortingGroup:
   m_ObjectHideFlags: 0

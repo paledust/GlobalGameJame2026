@@ -184,6 +184,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HappyMask
   vfxHappy: {fileID: 6796868189746462356}
+  sfxHappy: group_kid_laugh
+  sfxOnTouch: group_triangles
+  sfxVolume: 0.2
 --- !u!1001 &5505340809407877219
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using SimpleAudioSystem;
 using UnityEngine;
 
 public class LegTipControl : MonoBehaviour
@@ -19,6 +20,8 @@ public class LegTipControl : MonoBehaviour
     [Header("Step")]
     [SerializeField] private float stepHeight = 0.2f;
     [SerializeField] private float stepDuration = 0.2f;
+    [SerializeField] private string stepSFX;
+    [SerializeField] private float stepVolume = 0.25f;
     private Vector3 rightTipPos;
     private Vector3 leftTipPos;
     private Vector3 centerPos;
@@ -53,6 +56,10 @@ public class LegTipControl : MonoBehaviour
     void MoveTransToPos(Transform trans,Vector3 targetPos)
     {
         trans.DOKill();
-        trans.DOJump(targetPos, stepHeight, 1, stepDuration, false).OnComplete(() => OnStepDown?.Invoke());
+        trans.DOJump(targetPos, stepHeight, 1, stepDuration, false).OnComplete(() => 
+        {
+            AudioManager.Instance.PlaySoundEffect(stepSFX, stepVolume);
+            OnStepDown?.Invoke();
+        });
     }
 }

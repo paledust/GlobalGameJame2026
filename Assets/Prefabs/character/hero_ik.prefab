@@ -72,6 +72,7 @@ MonoBehaviour:
   LeftLegTip: {fileID: 4569345988552408333}
   stepHeight: 0.15
   stepDuration: 0.15
+  stepSFX: group_step
 --- !u!1 &8727521579808000563
 GameObject:
   m_ObjectHideFlags: 0

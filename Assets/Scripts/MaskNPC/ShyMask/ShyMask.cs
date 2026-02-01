@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using SimpleAudioSystem;
 using UnityEngine;
 
 using Random = UnityEngine.Random;
@@ -30,6 +31,11 @@ public class ShyMask : MonoBehaviour
 
     [Header("Gem")]
     [SerializeField] private Transform gemParent;
+
+    [Header("Audio")]
+    [SerializeField] private string sfxReachOut;
+    [SerializeField] private string sfxHideBack;
+    [SerializeField] private float sfxVolume = 1f;
     
     private float stateTimer = 0;
     private float rotateDelay;
@@ -76,6 +82,7 @@ public class ShyMask : MonoBehaviour
                             transform.DOKill();
                             transform.DOMove(initPos + Mathf.Sign(direction.x) * Random.Range(rootMoveDistanceRange.x, rootMoveDistanceRange.y) * Vector3.right, .25f).SetEase(Ease.OutBack);
                             currentState = ShyMaskState.ReachedOut;
+                            AudioManager.Instance.PlaySoundEffect(sfxReachOut, 1);
                         }
                     }
                 }
@@ -146,7 +153,8 @@ public class ShyMask : MonoBehaviour
             stateTimer = 0;
             reacahOutDelay = Random.Range(reachOutDelay.x, reachOutDelay.y);
             currentState = ShyMaskState.Idle;
-        });   
+        });
+        AudioManager.Instance.PlaySoundEffect(sfxHideBack, sfxVolume);
     }
     public void AE_HideOut()=>HideOut();
 }
