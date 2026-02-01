@@ -8,10 +8,12 @@ public class HappyMask : MonoBehaviour
     [SerializeField] private string sfxHappy;
     [SerializeField] private string sfxOnTouch;
     [SerializeField] private float sfxVolume = 0.5f;
+    [SerializeField] private float torqueForce = 0.2f;
+    [SerializeField] private float maxTorque = 0.5f;
     private GameObject player;
     private Rigidbody2D rigid2D;
-    private bool isHappy = false;
     private CoroutineExcuter happyCoroutine;
+    private bool isHappy = false;
 
     void Start()
     {
@@ -23,7 +25,7 @@ public class HappyMask : MonoBehaviour
         if(player!=null && !isHappy)
         {
             Vector2 dir = (player.transform.position - transform.position).normalized;
-            rigid2D.AddTorque(-Mathf.Sign(dir.x) * 0.2f);
+            rigid2D.AddTorque(-Mathf.Clamp(Mathf.Sign(dir.x) * torqueForce, -maxTorque, maxTorque));
         }
     }
     public void OnFindPlayer(GameObject player)
