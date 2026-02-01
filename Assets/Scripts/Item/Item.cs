@@ -33,3 +33,12 @@ public class Gem : Item
         eyeControl = null;
     }
 }
+
+public class Flower : Item
+{
+    public GameObject flowerPrefab{get; private set;}
+    public Flower(string key, GameObject flowerPrefab) : base(key)
+    {
+        this.flowerPrefab = flowerPrefab;
+    }
+}
