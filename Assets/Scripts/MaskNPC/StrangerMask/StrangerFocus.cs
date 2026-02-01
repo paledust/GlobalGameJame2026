@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class StrangerFocus : MonoBehaviour
 {
+    [SerializeField] private Stranger stranger;
     [SerializeField] private Transform focusPoint;
     [SerializeField] private Transform faceTrans;
     [SerializeField] private Transform kiteTrans;
@@ -22,9 +23,10 @@ public class StrangerFocus : MonoBehaviour
         focusPoint.DOMove(focusPos, 0.2f).OnComplete(() =>
         {
             var hat = heroTrans.GetComponent<ItemContainer>();
-            if(hat.GetItemCount("item_flower")>=2)
+            if(hat.GetItemCount("item_flower")>=3)
             {
-
+                stranger.SmellFlower();
+                Destroy(this);
                 return;
             }
 
