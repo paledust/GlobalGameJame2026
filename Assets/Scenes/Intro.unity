@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 478227192}
   - component: {fileID: 478227194}
   - component: {fileID: 478227193}
+  - component: {fileID: 478227195}
   m_Layer: 5
   m_Name: text_cn
   m_TagString: Untagged
@@ -321,8 +322,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 2164260863
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -391,6 +392,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478227191}
   m_CullTransparentMesh: 1
+--- !u!111 &478227195
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478227191}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 825e0367166cde54a8cc5ada5f651344, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 825e0367166cde54a8cc5ada5f651344, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,6 +1187,7 @@ GameObject:
   - component: {fileID: 1926929643}
   - component: {fileID: 1926929645}
   - component: {fileID: 1926929644}
+  - component: {fileID: 1926929646}
   m_Layer: 5
   m_Name: text_en
   m_TagString: Untagged
@@ -1294,6 +1313,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926929642}
   m_CullTransparentMesh: 1
+--- !u!111 &1926929646
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926929642}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 825e0367166cde54a8cc5ada5f651344, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 825e0367166cde54a8cc5ada5f651344, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &1972213136
 GameObject:
   m_ObjectHideFlags: 0
