@@ -1095,11 +1095,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.y
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 6095564924372257154, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1196,11 +1196,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.y
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4950818839793458441, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_SortingLayer
@@ -1305,11 +1305,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.y
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4950818839793458441, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_SortingLayer
@@ -1813,11 +1813,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.y
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 6095564924372257154, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2631,14 +2631,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 975740049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e9de81c0c7433d4e97b619dc5d76606, type: 3}
+  m_Script: {fileID: 11500000, guid: 183cd2ad656bcce48ae4bbe8cdcb42ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelController
-  startIndex: 0
-  levelProgressions:
-  - levelAsset: {fileID: 1453371825}
-    startDirector: {fileID: 0}
-    endDirector: {fileID: 0}
   amb_start: amb_roomtone
   amb_volume: 0.1
 --- !u!1 &1000759573
@@ -2884,11 +2879,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.y
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 6095564924372257154, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4256,11 +4251,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.y
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4950818839793458441, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_SortingLayer
@@ -5740,11 +5735,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.y
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 6095564924372257154, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6077,11 +6072,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.y
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 6095564924372257154, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6620,11 +6615,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1993368796216559334, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: reachOutDelay.y
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 6095564924372257154, guid: 0bf78a6b1bcaff3489309ca3f7917e8e, type: 3}
       propertyPath: m_LocalPosition.x

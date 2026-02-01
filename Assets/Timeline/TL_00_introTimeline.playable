@@ -64,7 +64,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 6458175109215707218}
-    m_Duration: 1.5
+    m_Duration: 1
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1153217408059617850}
     m_EaseInDuration: 0
@@ -154,10 +154,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 1.5
+    m_Start: 1
     m_ClipIn: 0
     m_Asset: {fileID: 7007487931610990294}
-    m_Duration: 5
+    m_Duration: 2
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1484452011518910645}
     m_EaseInDuration: 0
@@ -290,7 +290,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -2324671967919238122}
-    m_Duration: 1.5
+    m_Duration: 1
     m_TimeScale: 1
     m_ParentTrack: {fileID: 8331319749067226268}
     m_EaseInDuration: 0
@@ -338,10 +338,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: vc_intro_eye_1
   - m_Version: 1
-    m_Start: 1.5
+    m_Start: 1
     m_ClipIn: 0
     m_Asset: {fileID: 4115482350105694101}
-    m_Duration: 5
+    m_Duration: 2
     m_TimeScale: 1
     m_ParentTrack: {fileID: 8331319749067226268}
     m_EaseInDuration: 0

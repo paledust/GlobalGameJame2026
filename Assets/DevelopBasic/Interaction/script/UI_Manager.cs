@@ -21,6 +21,7 @@ public class UI_Manager : Singleton<UI_Manager>
         base.Awake();
         cursorChanger = new CoroutineExcuter(this);
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.None;
         UpdateCursorState(currentCursorState);
     }
     void OnApplicationFocus(bool hasFocus)

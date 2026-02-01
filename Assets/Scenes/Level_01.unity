@@ -1446,7 +1446,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -10}
+  m_LocalPosition: {x: 1.05, y: 3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2595,14 +2595,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 975740049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e9de81c0c7433d4e97b619dc5d76606, type: 3}
+  m_Script: {fileID: 11500000, guid: 183cd2ad656bcce48ae4bbe8cdcb42ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelController
-  startIndex: 0
-  levelProgressions:
-  - levelAsset: {fileID: 1453371825}
-    startDirector: {fileID: 0}
-    endDirector: {fileID: 0}
   amb_start: amb_roomtone
   amb_volume: 0.1
 --- !u!1 &1000759573

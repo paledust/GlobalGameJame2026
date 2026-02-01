@@ -3,7 +3,7 @@ using SimpleAudioSystem;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class LevelController : MonoBehaviour
+public class FirstLevelController : LevelController
 {
     [Serializable]
     public struct LevelProgression
@@ -25,19 +25,18 @@ public class LevelController : MonoBehaviour
 
     [SerializeField] private int startIndex;
     [SerializeField] private LevelProgression[] levelProgressions;
-    [Header("Audio")]
-    [SerializeField] private string amb_start;
-    [SerializeField] private float amb_volume = 0.1f;
     private int progressionIndex = 0;
 
-    void Start()
+    protected override void Start()
     {
-        AudioManager.Instance.PlayAmbience(amb_start, true, 0.1f, amb_volume);
+        base.Start();
         foreach(var level in levelProgressions)
         {
             level.UnloadLevel();
         }
-        progressionIndex = startIndex; 
+        progressionIndex = startIndex;
+        if(GameProgressionManager.Instance.isIntroOver)
+            progressionIndex = levelProgressions.Length-1;
         levelProgressions[progressionIndex].LoadLevel();
         EventHandler.E_OnNextGame += OnNextGame;
     }
@@ -52,6 +51,10 @@ public class LevelController : MonoBehaviour
         if(levelProgressions[progressionIndex].endDirector!=null)
             levelProgressions[progressionIndex].endDirector.Play();
         progressionIndex ++;
+        if(progressionIndex >= levelProgressions.Length-1)
+        {
+            GameProgressionManager.Instance.EndIntro();
+        }
     }
     [ContextMenu("MatchSceneToIndex")]
     public void MatchSceneToIndex()
