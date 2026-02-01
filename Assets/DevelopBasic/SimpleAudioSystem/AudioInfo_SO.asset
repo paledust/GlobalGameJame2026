@@ -18,6 +18,8 @@ MonoBehaviour:
     audio_clip: {fileID: 8300000, guid: 61f2fbb9c51aff74cacdcf2b58b5b61d, type: 3}
   - audio_name: amb_roomtone
     audio_clip: {fileID: 8300000, guid: b75c3a0a080e3064e8e05bb87462f2de, type: 3}
+  - audio_name: amb_forest
+    audio_clip: {fileID: 8300000, guid: 2d801f7ce3e343a4d82c4b3b27ca2898, type: 3}
   sfx_info_list:
   - audio_name: sfx_eye_open
     audio_clip: {fileID: 8300000, guid: e8394112d8ba91d49978e5b207a151a2, type: 3}
