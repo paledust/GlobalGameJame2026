@@ -1,9 +1,11 @@
+using SimpleAudioSystem;
 using UnityEngine;
 
 public class SightController : MonoBehaviour
 {
     [SerializeField] private EyeControl eyeControl;
     [SerializeField] private int MaxSight = 3;
+    [SerializeField] private string blinkSFX;
     private int sightIndex = 0;
     void OnEnable()
     {
@@ -18,5 +20,6 @@ public class SightController : MonoBehaviour
         sightIndex ++;
         if(sightIndex>=MaxSight) sightIndex = 0;
         eyeControl.CheckEye(sightIndex);
+        AudioManager.Instance.PlaySoundEffect(blinkSFX, 1);
     }
 }

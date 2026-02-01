@@ -16,5 +16,22 @@ MonoBehaviour:
   amb_info_list:
   - audio_name: amb_rainy
     audio_clip: {fileID: 8300000, guid: 61f2fbb9c51aff74cacdcf2b58b5b61d, type: 3}
-  sfx_info_list: []
-  sfx_group_info_list: []
+  - audio_name: amb_roomtone
+    audio_clip: {fileID: 8300000, guid: b75c3a0a080e3064e8e05bb87462f2de, type: 3}
+  sfx_info_list:
+  - audio_name: sfx_eye_open
+    audio_clip: {fileID: 8300000, guid: e8394112d8ba91d49978e5b207a151a2, type: 3}
+  sfx_group_info_list:
+  - audio_group_name: group_kick
+    audioClips:
+    - {fileID: 8300000, guid: 72c8011d94a0def42b2197a59e9fd514, type: 3}
+    - {fileID: 8300000, guid: 0687d87d2c4558547a050b647729a9b1, type: 3}
+    - {fileID: 8300000, guid: 0cc07a8a8e742fb438e5781af36efeb8, type: 3}
+    - {fileID: 8300000, guid: bdc09fc4eff72dc4eb3523370b3221a5, type: 3}
+  - audio_group_name: group_blink
+    audioClips:
+    - {fileID: 8300000, guid: f931e9c4181b57d46bdd637a24825168, type: 3}
+    - {fileID: 8300000, guid: 0db16415e5cbef34c933b0afe0ce5629, type: 3}
+    - {fileID: 8300000, guid: 83e57a2bfe0764447ba67110cdb88936, type: 3}
+    - {fileID: 8300000, guid: 6622cba0fe5d71f4797a63c05dcf0036, type: 3}
+    - {fileID: 8300000, guid: d76357a4a3e39fe4ba396e8bf6ab5adc, type: 3}

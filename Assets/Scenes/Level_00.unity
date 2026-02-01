@@ -1320,6 +1320,7 @@ MonoBehaviour:
   - {fileID: 1675653928}
   - {fileID: 2006410346}
   triggerCount: 3
+  blinkSFX: group_blink
 --- !u!1 &506783887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,7 +1337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &506783888
 Transform:
   m_ObjectHideFlags: 0
@@ -1502,7 +1503,7 @@ Camera:
   far clip plane: 50
   field of view: 25
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2566,8 +2567,8 @@ MonoBehaviour:
   - levelAsset: {fileID: 1453371825}
     startDirector: {fileID: 0}
     endDirector: {fileID: 0}
-  amb_start: amb_rainy
-  amb_volume: 0.1
+  amb_start: amb_roomtone
+  amb_volume: 0.15
 --- !u!1 &1000759573
 GameObject:
   m_ObjectHideFlags: 0
@@ -2651,6 +2652,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SingleEyeClick
   eyeMask: {fileID: 951107958}
   count: 3
+  blinkSFX: group_kick
+  finalSFX: sfx_eye_open
 --- !u!4 &1051969956 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2154108298900518774, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}

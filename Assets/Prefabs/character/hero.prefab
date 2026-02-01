@@ -1098,6 +1098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SightController
   eyeControl: {fileID: 6808818247340104952}
   MaxSight: 3
+  blinkSFX: group_blink
 --- !u!1 &4110676623588141201
 GameObject:
   m_ObjectHideFlags: 0
