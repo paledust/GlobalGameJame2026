@@ -3657,6 +3657,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stranger
       objectReference: {fileID: 0}
+    - target: {fileID: 6706948267907644139, guid: eeb1b01d92697e846aa9641323e9ccaa, type: 3}
+      propertyPath: overallVolume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6721411629266995246, guid: eeb1b01d92697e846aa9641323e9ccaa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.06800008

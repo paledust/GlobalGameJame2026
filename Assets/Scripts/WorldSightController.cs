@@ -22,21 +22,7 @@ public class WorldSightController : MonoBehaviour
         }
         else
         {
-            switch(sightID)
-            {
-                case "sight_blue":
-                    blueBK.SetActive(true);
-                    redBK.SetActive(false);
-                    break;
-                case "sight_red":
-                    blueBK.SetActive(false);
-                    redBK.SetActive(true);
-                    break;
-                default:
-                    blueBK.SetActive(false);
-                    redBK.SetActive(false);
-                    break;
-            }
+
             //Change to special sight based on sightID
         }
     }
