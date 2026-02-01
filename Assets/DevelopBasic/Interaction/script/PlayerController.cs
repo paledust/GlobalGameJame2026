@@ -13,6 +13,14 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 hoverPos;
     private Camera mainCam;
+    private float exitCounter;
+    public enum SleepingState
+    {
+        Awake,
+        Asleep,
+        Sleeping
+    }
+    private SleepingState currentSleepState = SleepingState.Awake;
 
     void Start()
     {
@@ -70,6 +78,45 @@ public class PlayerController : MonoBehaviour
         }
         else{
             m_holdingInteractable.ControllingUpdate(this);
+        }
+
+        switch(currentSleepState)
+        {
+            case SleepingState.Awake:
+                if(!Mouse.current.leftButton.isPressed)
+                {
+                    exitCounter = 0;
+                }
+                else
+                {
+                    exitCounter += Time.deltaTime;
+                    if(exitCounter>=2)
+                    {
+                        EventHandler.Call_OnAsleep();
+                        currentSleepState = SleepingState.Asleep;
+                    }
+                }
+                break;
+            case SleepingState.Asleep:
+                if(!Mouse.current.leftButton.isPressed)
+                {
+                    exitCounter = 0;
+                    EventHandler.Call_OnAwake();
+                    currentSleepState = SleepingState.Awake;
+                }
+                else
+                {
+                    exitCounter += Time.deltaTime;
+                    if(exitCounter>=4)
+                    {
+                        currentSleepState = SleepingState.Sleeping;
+                        GameManager.Instance.SwitchingScene("Intro");
+                    }
+                }
+                break;
+            case SleepingState.Sleeping:
+                // Do nothing, already sleeping
+                break;
         }
     }
 

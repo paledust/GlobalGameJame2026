@@ -2369,7 +2369,7 @@ SpriteRenderer:
   m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.20653595, g: 0.17474541, b: 0.3056603, a: 1}
+  m_Color: {r: 0.13963011, g: 0.09857596, b: 0.2679245, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3751,7 +3751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4548440138048002819, guid: a9bff317d033a48469183d74017a8761, type: 3}
       propertyPath: toScene
-      value: Level_00
+      value: Level_00_night
       objectReference: {fileID: 0}
     - target: {fileID: 5987697010992180970, guid: a9bff317d033a48469183d74017a8761, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3914,6 +3914,10 @@ PrefabInstance:
     - target: {fileID: 3116579289693573308, guid: 418426172407c6c4aa6bbc814f8a8961, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3651420091761034703, guid: 418426172407c6c4aa6bbc814f8a8961, type: 3}
+      propertyPath: speedLimit
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3651420091761034703, guid: 418426172407c6c4aa6bbc814f8a8961, type: 3}
       propertyPath: followTrans

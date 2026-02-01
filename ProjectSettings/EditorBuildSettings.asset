@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/DevelopBasic/Persistence.unity
     guid: 59c40c8abef98854eb8c73b59d6f5da7
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: a0c2766a8b8e651428ed01478b8182d7
+  - enabled: 1
     path: Assets/Scenes/Level_00.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
@@ -20,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_03.unity
     guid: 2f930d6e4068ca24bb1b786c5e3eca0c
+  - enabled: 1
+    path: Assets/Scenes/Level_00_night.unity
+    guid: 6dda05db84eb2f24986a324276b7e71e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 968f8b8df6b894246914bebb933b42c5, type: 3}
   m_UseUCBPForAssetBundles: 0

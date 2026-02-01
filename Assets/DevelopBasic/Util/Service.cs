@@ -1,10 +1,8 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public static class Service{
-    public static int InteractableLayer = LayerMask.NameToLayer("Interactable");
+    public static int InteractableLayer = LayerMask.NameToLayer("Interaction");
     public static int IgnoreRaycastLayer = LayerMask.NameToLayer("Ignore Raycast");
     public static int PlatformLayer = LayerMask.NameToLayer("Platform");
     public static string playerTag = "Player";

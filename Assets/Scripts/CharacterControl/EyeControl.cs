@@ -10,6 +10,30 @@ public class EyeControl : MonoBehaviour
     private string[] sightIDs = new string[2]{string.Empty, string.Empty};
     private int currentEyeStoneIndex = 0;
 
+    void OnEnable()
+    {
+        EventHandler.E_OnAsleep += OnAsleep;
+        EventHandler.E_OnAwake += OnAwake;
+    }
+    void OnDisable()
+    {
+        EventHandler.E_OnAsleep -= OnAsleep;
+        EventHandler.E_OnAwake -= OnAwake;
+    }
+    private void OnAsleep()
+    {
+        foreach(var eye in eyes)
+        {
+            eye.CloseEye();
+        }
+    }
+    private void OnAwake()
+    {
+        foreach(var eye in eyes)
+        {
+            eye.OpenEye();
+        }
+    }
     // Update is called once per frame
     void Update()
     {

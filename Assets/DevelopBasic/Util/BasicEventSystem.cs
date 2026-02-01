@@ -22,6 +22,10 @@ public static class EventHandler
     public static void Call_OnBothEye()=>E_OnBothEye?.Invoke();
     public static event Action<string> E_OnSwitchSight;
     public static void Call_OnSwitchSight(string sightID)=>E_OnSwitchSight?.Invoke(sightID);
+    public static event Action E_OnAsleep;
+    public static void Call_OnAsleep()=>E_OnAsleep?.Invoke();
+    public static event Action E_OnAwake;
+    public static void Call_OnAwake()=>E_OnAwake?.Invoke();
     #endregion
 
     #region Level Progression
