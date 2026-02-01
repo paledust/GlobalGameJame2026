@@ -18,22 +18,9 @@ public class DoubleEyeClick : MonoBehaviour
     {
         blinkIndex ++;
         blinkIndex = blinkIndex % 3;
-        switch(blinkIndex)
+        foreach(var eye in eyes)
         {
-            case 0:
-                foreach(var eye in eyes)
-                {
-                    eye.OpenEye();
-                }
-                break;
-            case 1:
-                eyes[0].OpenEye();
-                eyes[1].CloseEye();
-                break;
-            case 2:
-                eyes[0].CloseEye();
-                eyes[1].OpenEye();
-                break;
+            eye.BlinkEye();
         }
         triggerCount --;
         if(triggerCount<=0 && !isEnded)

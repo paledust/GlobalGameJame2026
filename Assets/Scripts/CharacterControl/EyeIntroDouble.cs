@@ -11,4 +11,8 @@ public class EyeIntroDouble : Eye
     {
         eyeMask.Play("intro_open");
     }
+    public override void BlinkEye()
+    {
+        eyeMask.Play("intro_blink_opened");
+    }
 }
