@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
                     if(exitCounter>=4)
                     {
                         currentSleepState = SleepingState.Sleeping;
-                        GameManager.Instance.SwitchingScene("Intro");
+                        GameManager.Instance.SwitchingScene("InBetween");
                     }
                 }
                 break;
