@@ -2556,7 +2556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e9de81c0c7433d4e97b619dc5d76606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelController
-  amb_start: amb_roomtone
+  amb_start: amb_forest
   amb_volume: 0.15
   startIndex: 0
   levelProgressions:
