@@ -1312,11 +1312,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8772508174488558687, guid: eeb1b01d92697e846aa9641323e9ccaa, type: 3}
   m_PrefabInstance: {fileID: 937506194404507048}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &517158819 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4092801537362987464, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
-  m_PrefabInstance: {fileID: 9053735977303340904}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,20 +2488,6 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 3472819246632528265, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
   m_PrefabInstance: {fileID: 9053735977303340904}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1322964983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517158819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15df9f85b4eabd449a3e20c3e7edd32f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerHatControl
-  hatRootTrans: {fileID: 9053735977303340905}
-  angleRange: 60
 --- !u!1 &1402717898
 GameObject:
   m_ObjectHideFlags: 0
@@ -4090,16 +4071,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2844832271350150144, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1763397507}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4092801537362987464, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1322964983}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
---- !u!4 &9053735977303340905 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3119544293508399489, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
-  m_PrefabInstance: {fileID: 9053735977303340904}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

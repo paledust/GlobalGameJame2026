@@ -4,12 +4,12 @@ using UnityEngine;
 //负责管理玩家身上的物品，以及管理场景中的可拾取道具是否已经被拿走
 public class ItemManager : Singleton<ItemManager>
 {
-    private HashSet<Item> items = new HashSet<Item>();
+    private HashSet<Item> playerItems = new HashSet<Item>();
     private Dictionary<int, bool> itemPickStatus = new Dictionary<int, bool>();
     protected override void Awake()
     {
         base.Awake();
-        items = new HashSet<Item>();
+        playerItems = new HashSet<Item>();
         itemPickStatus = new Dictionary<int, bool>();
         EventHandler.E_OnPlayerPickItem += OnPlayerPickItem;
         EventHandler.E_AfterLoadScene += OnAfterLoadScene;
@@ -20,15 +20,11 @@ public class ItemManager : Singleton<ItemManager>
         EventHandler.E_OnPlayerPickItem -= OnPlayerPickItem;
         EventHandler.E_AfterLoadScene -= OnAfterLoadScene;
     }
-    public void ClearItemStatus()
-    {
-        items.Clear();
-        itemPickStatus.Clear();
-    }
+
     private void OnPlayerPickItem(Item item)
     {
         if (item == null) return;
-        if(items.Add(item))
+        if(playerItems.Add(item))
         {
             itemPickStatus[item.uid] = true;
         }
@@ -44,6 +40,15 @@ public class ItemManager : Singleton<ItemManager>
                 itemBasic.gameObject.SetActive(false);
             }
         }
+    }
+    public void ClearItemStatus()
+    {
+        playerItems.Clear();
+        itemPickStatus.Clear();
+    }
+    public HashSet<Item> GetPlayerItems()
+    {
+        return playerItems;
     }
     public bool IsItemPicked(int uid)
     {

@@ -8,6 +8,7 @@ public abstract class Item
     public Item(string key){this.itemKey = key;}
     protected GameObject picker;
     public virtual void OnPicked(GameObject picker){this.picker = picker;}
+    public virtual void OnPickedImmediately(GameObject picker){this.picker = picker;}
     public virtual void OnDropped(GameObject picker){this.picker = null;}
     public void SetUID(int uid){this.uid = uid;}
 }
@@ -27,6 +28,12 @@ public class Gem : Item
         base.OnPicked(picker);
         eyeControl = picker.GetComponent<EyeControl>();
         eyeControl.InsertEyeStone(prefabEyeStone, sightKey);
+    }
+    public override void OnPickedImmediately(GameObject picker)
+    {
+        base.OnPickedImmediately(picker);
+        eyeControl = picker.GetComponent<EyeControl>();
+        eyeControl.InsertEyeStoneImmediately(prefabEyeStone, sightKey);
     }
     public override void OnDropped(GameObject picker)
     {
@@ -50,5 +57,11 @@ public class Flower : Item
         base.OnPicked(picker);
         hatControl = picker.GetComponent<PlayerHatControl>();
         hatControl.WearHat(flowerPrefab);
+    }
+    public override void OnPickedImmediately(GameObject picker)
+    {
+        base.OnPickedImmediately(picker);
+        hatControl = picker.GetComponent<PlayerHatControl>();
+        hatControl.WearHatImmediately(flowerPrefab);
     }
 }

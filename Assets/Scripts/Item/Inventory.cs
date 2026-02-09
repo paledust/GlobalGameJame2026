@@ -7,12 +7,25 @@ public class Inventory : MonoBehaviour
 {
     private HashSet<Item> items = new HashSet<Item>();
     private Dictionary<string, int> itemCountDict = new Dictionary<string, int>();
-    public void StoreItem(Item item)
+
+    void Start()
+    {
+        var items = ItemManager.Instance.GetPlayerItems();
+        foreach(var item in items)
+        {
+            StoreItem(item, true);
+        }
+    }
+    public void StoreItem(Item item, bool storeImmediately = false)
     {
         if (item == null) return;
         if(items.Add(item))
         {
-            item.OnPicked(this.gameObject);
+            if(storeImmediately)
+                item.OnPickedImmediately(this.gameObject);
+            else
+                item.OnPicked(this.gameObject);
+                
             if(itemCountDict.ContainsKey(item.itemKey))
             {
                 itemCountDict[item.itemKey]++;
