@@ -3158,6 +3158,18 @@ PrefabInstance:
       value: vfx_click
       objectReference: {fileID: 0}
     - target: {fileID: 1521670423644220428, guid: 841f17efd0ae24b44b66275429a8861d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521670423644220428, guid: 841f17efd0ae24b44b66275429a8861d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521670423644220428, guid: 841f17efd0ae24b44b66275429a8861d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521670423644220428, guid: 841f17efd0ae24b44b66275429a8861d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
