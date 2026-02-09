@@ -4049,6 +4049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: flower
       objectReference: {fileID: 0}
+    - target: {fileID: 5708514006408269799, guid: 0be8b7f13ca6cc0499580cdbdf8c89f3, type: 3}
+      propertyPath: itemUID
+      value: 10001
+      objectReference: {fileID: 0}
     - target: {fileID: 7773961798234920994, guid: 0be8b7f13ca6cc0499580cdbdf8c89f3, type: 3}
       propertyPath: m_SortingOrder
       value: 1

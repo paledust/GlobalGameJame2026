@@ -50,8 +50,19 @@ public class EyeControl : MonoBehaviour
         sightIDs[currentEyeStoneIndex] = sightKey;
         Vector3 initScale = eyeStone.transform.localScale;
         eyeStone.transform.localPosition = Vector3.zero;
+        InsertEyeStoneImmediately(eyeStonePrefab, sightKey);
         eyeStone.transform.localScale = Vector3.zero;
         eyeStone.transform.DOScale(initScale, 0.1f).SetDelay(0.5f).SetEase(Ease.OutBack);
+        currentEyeStoneIndex ++;
+    }
+    public void InsertEyeStoneImmediately(GameObject eyeStonePrefab, string sightKey)
+    {
+        if(eyeStonePrefab==null) return;
+        if(currentEyeStoneIndex>=eyeSlots.Length) return;
+        Transform eyeSlot = eyeSlots[currentEyeStoneIndex];
+        GameObject eyeStone = Instantiate(eyeStonePrefab, eyeSlot);
+        sightIDs[currentEyeStoneIndex] = sightKey;
+        eyeStone.transform.localPosition = Vector3.zero;
         currentEyeStoneIndex ++;
     }
     public void CheckEye(int index)

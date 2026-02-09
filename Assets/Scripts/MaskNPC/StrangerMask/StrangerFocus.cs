@@ -22,8 +22,7 @@ public class StrangerFocus : MonoBehaviour
         Vector3 focusPos = (heroPos - faceTrans.position) * 0.1f + faceTrans.position;
         focusPoint.DOMove(focusPos, 0.2f).OnComplete(() =>
         {
-            var hat = heroTrans.GetComponent<ItemContainer>();
-            if(hat.GetItemCount("item_flower")>=3)
+            if(heroTrans.GetComponent<Inventory>().GetItemCount("item_flower")>=3)
             {
                 stranger.SmellFlower();
                 Destroy(this);

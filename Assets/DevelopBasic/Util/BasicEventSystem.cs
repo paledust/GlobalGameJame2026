@@ -32,6 +32,11 @@ public static class EventHandler
     public static event Action E_OnNextGame;
     public static void Call_OnNextGame()=>E_OnNextGame?.Invoke();
     #endregion
+
+    #region Inventory
+    public static event Action<Item> E_OnPlayerPickItem;
+    public static void Call_OnPlayerPickItem(Item item)=>E_OnPlayerPickItem?.Invoke(item);
+    #endregion
 }
 
 //A More Strict Event System

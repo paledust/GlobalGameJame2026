@@ -17,12 +17,11 @@ public class ItemPicker : MonoBehaviour
     [SerializeField] private float pickHeight = 0.4f;
     [SerializeField] private float readyDuration = 0.5f;
     [SerializeField, ShowOnly] private PickerState pickerState;
+    [SerializeField] private Inventory inventory;
 
     [Header("Picker Face Settings")]
     [SerializeField] private SortingGroup faceSortingGroup;
 
-    [Header("Container Settings")]
-    [SerializeField] private ItemContainer itemContainer;
     private AnimationControl animationControl;
     private HashSet<ItemBasic> pendingItems = new HashSet<ItemBasic>();
     private float pickTimer = 0;
@@ -79,7 +78,7 @@ public class ItemPicker : MonoBehaviour
                     if(!pickFlag)
                         pickFlag = true;
                     itemBasic.OnPickUp();
-                    itemContainer.StoreItem(itemBasic.GetItem());
+                    inventory.StoreItem(itemBasic.GetItem());
                     Destroy(itemBasic.gameObject);
                 }
                 pendingItems.Clear();

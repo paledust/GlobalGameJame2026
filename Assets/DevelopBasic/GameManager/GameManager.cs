@@ -98,6 +98,11 @@ public class GameManager : Singleton<GameManager>
         string currentLevel = SceneManager.GetActiveScene().name;
         StartCoroutine(RestartLevel(currentLevel));
     }
+    public void ResetProgress()
+    {
+        GameProgressionManager.Instance.ResetProgress();
+        ItemManager.Instance.ClearItemStatus();
+    }
 #endregion
 
 #region Scene Transition

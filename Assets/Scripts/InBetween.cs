@@ -7,6 +7,7 @@ public class InBetween : MonoBehaviour
     [SerializeField] private string nextSceneName = "Intro";
     void Start()
     {
+        GameManager.Instance.ResetProgress();
         StartCoroutine(coroutineDelayLoading());
     }
     IEnumerator coroutineDelayLoading()

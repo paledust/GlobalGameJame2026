@@ -2,7 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class ItemContainer : MonoBehaviour
+//负责管理玩家身上的物品，以及管理场景中的可拾取道具是否已经被拿走
+public class Inventory : MonoBehaviour
 {
     private HashSet<Item> items = new HashSet<Item>();
     private Dictionary<string, int> itemCountDict = new Dictionary<string, int>();
@@ -20,6 +21,7 @@ public class ItemContainer : MonoBehaviour
             {
                 itemCountDict[item.itemKey] = 1;
             }
+            EventHandler.Call_OnPlayerPickItem(item);
         }
     }
     public void PopItem(Item item)

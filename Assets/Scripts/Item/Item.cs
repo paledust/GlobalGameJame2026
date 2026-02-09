@@ -4,10 +4,12 @@ using UnityEngine;
 public abstract class Item
 {
     public string itemKey{get; protected set;}
+    public int uid{get; protected set;}
     public Item(string key){this.itemKey = key;}
     protected GameObject picker;
     public virtual void OnPicked(GameObject picker){this.picker = picker;}
     public virtual void OnDropped(GameObject picker){this.picker = null;}
+    public void SetUID(int uid){this.uid = uid;}
 }
 
 public class Gem : Item
@@ -47,6 +49,6 @@ public class Flower : Item
     {
         base.OnPicked(picker);
         hatControl = picker.GetComponent<PlayerHatControl>();
-        hatControl.OnGrowHat(flowerPrefab);
+        hatControl.WearHat(flowerPrefab);
     }
 }
