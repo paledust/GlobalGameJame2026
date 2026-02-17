@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: db4cd1b9a99b0e641a1200fb4fd45a9e
+guid: fb978a80857ab1b49ae4f37f50bf80f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -648079411108689857
-    second: cursor_interstella_0
+      213: 6586461156150141773
+    second: diamond_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cursor_interstella_0
+      name: diamond_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 23
-        width: 141
-        height: 149
+        x: 97
+        y: 96
+        width: 1008
+        height: 1011
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f384f92953f8107f0800000000000000
-      internalID: -648079411108689857
+      spriteID: d43ec33668fc76b50800000000000000
+      internalID: 6586461156150141773
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cursor_interstella_0: -648079411108689857
+      diamond_0: 6586461156150141773
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

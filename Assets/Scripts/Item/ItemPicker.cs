@@ -19,9 +19,6 @@ public class ItemPicker : MonoBehaviour
     [SerializeField, ShowOnly] private PickerState pickerState;
     [SerializeField] private Inventory inventory;
 
-    [Header("Picker Face Settings")]
-    [SerializeField] private SortingGroup faceSortingGroup;
-
     private AnimationControl animationControl;
     private HashSet<ItemBasic> pendingItems = new HashSet<ItemBasic>();
     private float pickTimer = 0;
@@ -41,7 +38,6 @@ public class ItemPicker : MonoBehaviour
                 {
                     pickerState = PickerState.ReadyToPick;
                     pickTimer = 0;
-                    faceSortingGroup.enabled = true;
                     foreach(var itemBasic in pendingItems)
                     {
                         itemBasic.OnSelected();
@@ -65,7 +61,6 @@ public class ItemPicker : MonoBehaviour
                         {
                             itemBasic.OnDeselected();
                         }
-                        faceSortingGroup.enabled = false;
                         return;
                     }
                     return;
@@ -87,7 +82,6 @@ public class ItemPicker : MonoBehaviour
                 {
                     animationControl.TriggerHappy();
                 }
-                faceSortingGroup.enabled = false;
                 pickerState = PickerState.Idle;
                 
                 break;

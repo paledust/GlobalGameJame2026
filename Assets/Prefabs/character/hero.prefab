@@ -1309,7 +1309,7 @@ GameObject:
   - component: {fileID: 8512267742538546369}
   - component: {fileID: 3208631232689300945}
   - component: {fileID: 6648049325956190814}
-  - component: {fileID: 6995659983055969695}
+  - component: {fileID: 2299484349174613720}
   m_Layer: 0
   m_Name: face
   m_TagString: Untagged
@@ -1419,14 +1419,14 @@ ParentConstraint:
   m_Sources:
   - sourceTransform: {fileID: 856449621048659663}
     weight: 1
---- !u!210 &6995659983055969695
+--- !u!210 &2299484349174613720
 SortingGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5598622566082494020}
-  m_Enabled: 0
+  m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
@@ -1796,16 +1796,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2928480267669755018, guid: 6ccd1ef0a70e3984a8bc590dcd8f6127, type: 3}
       propertyPath: readyHeight
-      value: 0.55
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2928480267669755018, guid: 6ccd1ef0a70e3984a8bc590dcd8f6127, type: 3}
       propertyPath: pickerHitbox
       value: 
       objectReference: {fileID: 3412503020055075005}
     - target: {fileID: 2928480267669755018, guid: 6ccd1ef0a70e3984a8bc590dcd8f6127, type: 3}
-      propertyPath: faceSortingGroup
-      value: 
-      objectReference: {fileID: 6995659983055969695}
+      propertyPath: readyDuration
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3216445220512942709, guid: 6ccd1ef0a70e3984a8bc590dcd8f6127, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
