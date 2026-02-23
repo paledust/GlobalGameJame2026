@@ -26,4 +26,8 @@ public class MotionControl : MonoBehaviour
         }
         playerRigid.linearVelocityX = Mathf.Clamp((targetPos.x - playerRigid.position.x) * LerpSpeed, -speedLimit, speedLimit);
     }
+    public void ChangeSpeedLimit(float newLimit)
+    {
+        speedLimit = newLimit;
+    }
 }

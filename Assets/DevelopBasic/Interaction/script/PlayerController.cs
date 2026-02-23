@@ -104,15 +104,15 @@ public class PlayerController : MonoBehaviour
                     EventHandler.Call_OnAwake();
                     currentSleepState = SleepingState.Awake;
                 }
-                else
-                {
-                    exitCounter += Time.deltaTime;
-                    if(exitCounter>=4)
-                    {
-                        currentSleepState = SleepingState.Sleeping;
-                        GameManager.Instance.SwitchingScene("InBetween");
-                    }
-                }
+                // else
+                // {
+                //     exitCounter += Time.deltaTime;
+                //     if(exitCounter>=4)
+                //     {
+                //         currentSleepState = SleepingState.Sleeping;
+                //         GameManager.Instance.SwitchingScene("InBetween");
+                //     }
+                // }
                 break;
             case SleepingState.Sleeping:
                 // Do nothing, already sleeping
