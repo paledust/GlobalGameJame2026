@@ -46,6 +46,7 @@ public class GameProgressionManager : Singleton<GameProgressionManager>
             isRedGemPicked = true;
         }
 
+        Debug.LogWarning("??");
         if(isBlueGemPicked && isRedGemPicked)
         {
             Shader.SetGlobalInt(GLOBAL_REVEAL_KEY, 1);

@@ -300,12 +300,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.7200001
       objectReference: {fileID: 0}
+    - target: {fileID: 8754371023171133418, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9063553059836011789, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2607706830413334066, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
+    - {fileID: 7447257056406686026, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -362,6 +367,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stranger
   animationControl: {fileID: 1172205066936970375}
+  kiteTrans: {fileID: 0}
+  pullCloseTrans: {fileID: 0}
+  gemRigid: {fileID: 0}
+  focusPoint: {fileID: 0}
+  focusKite: {fileID: 0}
 --- !u!4 &8050294033910195686 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 856449621048659663, guid: 68b2e292a2a86b44295f4043363ef4c8, type: 3}

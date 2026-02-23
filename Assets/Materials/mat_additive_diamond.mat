@@ -104,7 +104,7 @@ Material:
     - _EmissionScale: 5
     - _EnvironmentReflections: 1
     - _FadeMin: 0.55
-    - _FadeSmooth: 0.3
+    - _FadeSmooth: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
